@@ -1,70 +1,94 @@
 {
- "fetched_at": "2026-10-22T21:32:24+05:30",
+ "fetched_at": "2026-10-23T01:36:55+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22957": {
+  "19255": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 21:45"
+   "note": "Incorrect Start Day"
   },
-  "22969": {
-   "delay": 0.0,
-   "at": "SR",
-   "age": -1,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "22955": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 17:45"
   },
-  "22926": {
-   "delay": 0.0,
-   "at": "LTR",
-   "age": 0,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "22956": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:25"
   },
-  "19217": {
-   "delay": 4.0,
-   "at": "MHD",
-   "age": 5,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "20910": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "12972": {
-   "delay": 17.0,
-   "at": "SNEC",
-   "age": -1,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "12971": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "20938": {
-   "delay": 0.0,
-   "at": "BHU",
-   "age": -1,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "22952": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "20907": {
-   "delay": 0.0,
-   "at": "VS",
-   "age": -1,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "14311": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "22990": {
-   "delay": 0.0,
-   "at": "JA",
-   "age": -1,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+  "19269": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20908": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22958": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22945": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
