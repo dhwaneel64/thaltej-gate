@@ -3,7 +3,7 @@
 How likely is it that the level crossing at Ambli Road is closed right now, and how long
 would you sit there? A Monte Carlo model of 110 trains, plus live running status.
 
-- **`site/`** — the website. A single page that runs the whole simulation in the browser.
+- **`docs/`** — the website. A single page that runs the whole simulation in the browser.
 - **`crossing_sim.py`** — the same model as a command-line tool.
 - **`web_data.py`** — builds the site, and fetches the live-delay snapshot it reads.
 
@@ -24,7 +24,7 @@ git push -u origin main
 
 Then, in the repo on github.com:
 
-1. **Settings → Pages** → Source: *Deploy from a branch* → Branch: `main`, Folder: **`/site`** → Save.
+1. **Settings → Pages** → Source: *Deploy from a branch* → Branch: `main`, Folder: **`/docs`** → Save.
 2. **Settings → Actions → General** → Workflow permissions: **Read and write** → Save.
    (Without this the refresh job cannot commit new delays.)
 3. **Actions** tab → *Refresh live delays* → **Run workflow**, to fill in the first snapshot.
@@ -36,7 +36,7 @@ Nothing in here is sensitive — it is a train timetable.
 
 ### Anything else
 
-Drag the `site/` folder onto [app.netlify.com/drop](https://app.netlify.com/drop) or
+Drag the `docs/` folder onto [app.netlify.com/drop](https://app.netlify.com/drop) or
 [tiiny.host](https://tiiny.host) and you get a link in about ten seconds. The page works
 fine, but nothing refreshes `live.json`, so it falls back to 7-day averages after a few
 hours — which it says on screen. Re-upload the folder to refresh it.
@@ -47,7 +47,7 @@ hours — which it says on screen. Re-upload the folder to refresh it.
 
 `.github/workflows/refresh-live.yml` runs every 15 minutes on GitHub's runners: it looks up
 the current delay of every train due at the crossing in the next 4 hours, writes
-`site/live.json`, and commits only if something changed. The page re-reads that file on load
+`docs/live.json`, and commits only if something changed. The page re-reads that file on load
 and every 4 minutes.
 
 Two things to know. GitHub **disables scheduled workflows after 60 days of no commits** to
@@ -61,7 +61,7 @@ trains — the page carries on with averages.
 To refresh by hand:
 
 ```bash
-python web_data.py --live --hours 4 > site/live.json
+python web_data.py --live --hours 4 > docs/live.json
 git commit -am "live delays" && git push
 ```
 
@@ -72,12 +72,12 @@ git commit -am "live delays" && git push
 ```bash
 pip install -r requirements.txt
 
-python web_data.py --site        # rebuild site/index.html after editing site_template.html
-cd site && python -m http.server 8000
+python web_data.py --site        # rebuild docs/index.html after editing site_template.html
+cd docs && python -m http.server 8000
 # http://127.0.0.1:8000  — serve it, don't open the file directly, or live.json won't load
 ```
 
-`site/index.html` is **generated**. Edit `site_template.html` and rebuild; the build only
+`docs/index.html` is **generated**. Edit `site_template.html` and rebuild; the build only
 splices the timetable JSON into the `/*__SCHEDULE__*/` placeholder.
 
 ## The command-line tool

@@ -4,7 +4,7 @@
   python web_data.py --live --hours 3      # live delays for trains due in the next N hours
                                            # -> paste into the app's Sync sheet
   python web_data.py --build               # gate_template.html + schedule -> gate.html
-  python web_data.py --site                # site_template.html + schedule -> site/index.html
+  python web_data.py --site                # site_template.html + schedule -> docs/index.html
 
 The JSON modes print to stdout.
 """
@@ -71,7 +71,7 @@ def build(template="gate_template.html", out="gate.html", path="trains.csv"):
     return out, len(html)
 
 
-def build_site(template="site_template.html", out="site/index.html", path="trains.csv"):
+def build_site(template="site_template.html", out="docs/index.html", path="trains.csv"):
     """Splice the schedule into the standalone website."""
     import os
     os.makedirs(os.path.dirname(out), exist_ok=True)
