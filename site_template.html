@@ -101,7 +101,8 @@ button{font:inherit; color:inherit; background:none; border:0; cursor:pointer}
 main{position:relative; z-index:3}
 .pin{position:sticky; top:0; min-height:100vh; min-height:100svh; display:flex; flex-direction:column; justify-content:center;
      padding:92px 18px calc(74px + env(safe-area-inset-bottom)); max-width:720px; margin:0 auto}
-#s1{height:115vh; height:115svh} #s1 .pin{justify-content:flex-end}
+#s1{height:115vh; height:115svh}
+#s1 .pin{justify-content:flex-end; padding-bottom:calc(126px + env(safe-area-inset-bottom))}
 #s2{height:420vh; height:420svh}
 #s3{height:160vh; height:160svh}
 #s4 .pin{position:relative; min-height:auto; justify-content:flex-start; padding-bottom:calc(110px + env(safe-area-inset-bottom))}
@@ -532,7 +533,7 @@ function syncTrains(){
    through the barrier (which stands at x=+4.4) and the gate, the oncoming
    trains and the risk ribbon all stay in frame together. */
 const KEYS=[
-  {p:0.00, pos:[13.5,5.0,27.0],  look:[1.8,2.2,-2]},
+  {p:0.00, pos:[13.5,5.0,27.0],  look:[-2.2,2.6,-2]},
   {p:0.16, pos:[-11.0,4.6,17.0], look:[0.5,2.2,-18]},
   {p:0.45, pos:[-13.5,9.5,-7.0], look:[0.5,1.4,-64]},
   {p:0.62, pos:[-15.5,5.0,-36.0],look:[-0.5,2.0,-66]},
