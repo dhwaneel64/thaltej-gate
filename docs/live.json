@@ -1,59 +1,67 @@
 {
- "fetched_at": "2026-10-22T17:14:30+05:30",
+ "fetched_at": "2026-10-22T21:32:24+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "11463": {
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Train starts at 21:45"
   },
-  "94801": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 17:30"
-  },
-  "22959": {
-   "delay": 2.0,
-   "at": "BJD",
-   "age": 0,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
-  },
-  "69185": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 20:05"
-  },
-  "19218": {
-   "delay": 1.0,
-   "at": "CJR",
-   "age": 0,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22946": {
+  "22969": {
    "delay": 0.0,
-   "at": "VD",
+   "at": "SR",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 0.0,
+   "at": "LTR",
    "age": 0,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
   },
-  "19015": {
-   "delay": 2.0,
-   "at": "LKD",
-   "age": 1,
+  "19217": {
+   "delay": 4.0,
+   "at": "MHD",
+   "age": 5,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 17.0,
+   "at": "SNEC",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20938": {
+   "delay": 0.0,
+   "at": "BHU",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20907": {
+   "delay": 0.0,
+   "at": "VS",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22990": {
+   "delay": 0.0,
+   "at": "JA",
+   "age": -1,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
