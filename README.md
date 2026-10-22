@@ -80,6 +80,16 @@ cd docs && python -m http.server 8000
 `docs/index.html` is **generated**. Edit `site_template.html` and rebuild; the build only
 splices the timetable JSON into the `/*__SCHEDULE__*/` placeholder.
 
+The page is three files. `docs/model.js` is the simulation, kept separate so the look can be
+rewritten without touching arithmetic that has been checked against `crossing_sim.py`.
+`docs/vendor/three.min.js` is three.js r149, vendored rather than loaded from a CDN so the
+site has no third-party dependency and still works offline. `site_template.html` is
+everything else: the scene, the scroll choreography and the type.
+
+Both scripts are classic (non-module) and therefore **share one global scope** — declaring the
+same `const` in both is a SyntaxError that silently kills the whole page. If you add a
+top-level name to either, check it is not already in the other.
+
 ## The command-line tool
 
 ```bash

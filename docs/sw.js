@@ -1,8 +1,9 @@
 /* Keeps the app usable with no signal. The simulation runs locally, so a cached
    page is still a working app — only the live delays need the network, and
    live.json is deliberately never cached. */
-const CACHE = "thaltej-v1";
-const SHELL = ["./", "./index.html", "./manifest.webmanifest", "./icon.svg", "./apple-touch-icon.png"];
+const CACHE = "thaltej-v2";
+const SHELL = ["./", "./index.html", "./model.js", "./vendor/three.min.js",
+               "./manifest.webmanifest", "./icon.svg", "./apple-touch-icon.png"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
