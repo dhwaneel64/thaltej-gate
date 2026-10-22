@@ -1,14 +1,14 @@
 {
- "fetched_at": "2026-10-22T17:13:56+05:30",
+ "fetched_at": "2026-10-22T17:14:30+05:30",
  "horizon_hours": 4.0,
  "delays": {
   "11463": {
-   "delay": 0.0,
-   "at": "VGDC",
-   "age": 13,
-   "run_date": "2026-10-22",
-   "source": "railyatri",
-   "note": ""
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
   "94801": {
    "delay": null,
@@ -21,7 +21,7 @@
   "22959": {
    "delay": 2.0,
    "at": "BJD",
-   "age": -1,
+   "age": 0,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
@@ -45,7 +45,7 @@
   "22946": {
    "delay": 0.0,
    "at": "VD",
-   "age": -1,
+   "age": 0,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
@@ -53,7 +53,7 @@
   "19015": {
    "delay": 2.0,
    "at": "LKD",
-   "age": 0,
+   "age": 1,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
