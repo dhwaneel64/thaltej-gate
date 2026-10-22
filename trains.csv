@@ -1,0 +1,111 @@
+train_no,name,direction,halts_ABD,crossing_time,crossing_min,crossing_days,runs_per_week,ref_point,ref_time,day_no_at_ref,origin_days,avg_delay_min,delay_source
+22989,BDTS MHV EXP,down,0,00:57,57,"Thu,Sat",2,ADI_dep,00:35,2,"Wed,Fri",11.0,trainspnrstatus_7day
+22974,PURI GIMB SF,down,0,00:57,57,Mon,1,ADI_dep,00:35,3,Sat,,
+22963,BDTS BVC SFAST,down,0,00:57,57,Tue,1,ADI_dep,00:35,2,Mon,,
+20819,PURI OKHA SF,down,0,01:07,67,Tue,1,ADI_dep,00:45,3,Sun,,
+20803,VSKP GIMB SF,down,0,01:07,67,Sat,1,ADI_dep,00:45,3,Thu,3.0,trainspnrstatus_7day
+22924,BDTS HUMSAFAR,up,0,01:12,72,"Mon,Wed,Sat",3,VG_dep,00:37,2,"Tue,Fri,Sun",,
+22990,MHV BDTS EXP,up,0,01:12,72,"Fri,Sun",2,VG_dep,00:37,2,"Thu,Sat",,
+16733,RMM OKHA EXP,down,0,01:27,87,Mon,1,ADI_dep,01:05,4,Fri,9.0,trainspnrstatus_7day
+19256,MAHUVA SURAT EX,up,0,01:37,97,"Mon,Tue,Wed,Thu,Sat",5,VG_dep,01:02,2,"Mon,Tue,Wed,Fri,Sun",,
+19255,SURAT MAHUVA EX,down,0,01:42,102,"Mon,Tue,Wed,Fri,Sun",5,ADI_dep,01:20,2,"Mon,Tue,Thu,Sat,Sun",6.0,trainspnrstatus_7day
+19559,TPTY OKHA EXP,down,0,01:42,102,Sat,1,ADI_dep,01:20,3,Thu,,
+22955,KUTCH EXPRESS,down,0,01:52,112,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ADI_dep,01:30,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",13.0,trainspnrstatus_7day
+22956,KUTCH EXPRESS,up,0,02:03,123,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,VG_dep,01:28,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+20910,PBR TVCN SF EXP,up,0,02:25,145,Fri,1,VG_dep,01:50,2,Thu,,
+22908,HAPA MAO SF EXP,up,0,02:25,145,Thu,1,VG_dep,01:50,2,Wed,,
+12971,BDTS BVC SF EXP,down,0,03:02,182,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ADI_dep,02:40,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",11.0,trainspnrstatus_7day
+22939,OKHA BSP SF EXP,up,0,03:17,197,Sun,1,VG_dep,02:42,2,Sat,,
+22952,GIMB BDTS SFAST,up,0,03:17,197,Fri,1,VG_dep,02:42,2,Thu,,
+20804,GIMB VSKP SF EX,up,0,03:17,197,Mon,1,VG_dep,02:42,2,Sun,,
+20820,OKHA PURI EXP,up,0,03:17,197,Thu,1,VG_dep,02:42,2,Wed,,
+14311,ALA HAZRAT EXP,down,0,03:45,225,"Wed,Fri,Sun",3,CLDY_dep,03:40,2,"Tue,Thu,Sat",,
+12942,PARASNATH EXP,down,0,03:57,237,Sat,1,ADI_dep,03:35,3,Thu,5.0,trainspnrstatus_7day
+19108,BHAVNAGAR EXP,down,1,03:58,238,Wed,1,ABD_arr,04:00,3,Mon,,
+20937,PBR DEE EXPRESS,up,0,04:00,240,"Wed,Sun",2,CLDY_arr,04:05,2,"Tue,Sat",,
+19269,PBR MFP EXPRESS,up,0,04:00,240,"Fri,Sat",2,CLDY_arr,04:05,2,"Thu,Fri",,
+20908,SAYAJINAGRI EXP,up,0,04:12,252,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,VG_dep,03:37,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+22907,MAO HAPA SF EXP,down,0,04:12,252,Sat,1,ADI_dep,03:50,2,Fri,7.0,trainspnrstatus_7day
+19270,PBR EXPRESS,down,0,04:43,283,"Tue,Wed",2,CLDY_dep,04:38,3,"Mon,Sun",,
+22958,SOMNATH EXPRESS,up,0,04:56,296,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_arr,05:01,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+22945,SAURASHTRA MAIL,down,0,05:31,331,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_dep,05:26,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7.0,trainspnrstatus_7day
+20686,SBC GIMB SF EXP,down,0,06:02,362,Mon,1,ADI_dep,05:40,3,Sat,9.0,trainspnrstatus_7day
+22925,OKHA VANDE BHARAT,down,1,06:21,381,"Mon,Wed,Thu,Fri,Sat,Sun",6,ABD_arr,06:23,1,"Mon,Wed,Thu,Fri,Sat,Sun",,
+22906,SHM OKHA SF EXP,down,0,06:27,387,Thu,1,ADI_dep,06:05,3,Tue,,
+12906,SHM PBR SUF EXP,down,0,06:27,387,"Mon,Sun",2,ADI_dep,06:05,3,"Fri,Sat",218.0,trainspnrstatus_7day
+19016,SAURASHTRA EXP,up,0,06:33,393,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_arr,06:38,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+16334,TVC VRL EXP,down,0,07:12,432,Wed,1,ADI_dep,06:50,3,Mon,,
+16338,ERS OKHA EXP,down,0,07:12,432,"Fri,Sun",2,ADI_dep,06:50,3,"Wed,Fri",,
+16336,NCJ GIMB EXP,down,0,07:12,432,Thu,1,ADI_dep,06:50,3,Tue,,
+15046,OKHA GKP EXP,up,0,07:27,447,Mon,1,CLDY_arr,07:32,2,Sun,,
+19560,OKHA TPTY EXP,up,0,07:27,447,Tue,1,VG_dep,06:52,2,Mon,,
+11092,PUNE BHUJ EXP,down,0,07:52,472,Tue,1,ADI_dep,07:30,2,Mon,,
+11088,PUNE VRL EXP,down,0,07:57,477,Fri,1,ADI_dep,07:35,2,Thu,,
+22923,JAM HUMSAFAR,down,0,08:17,497,"Tue,Fri,Sun",3,ADI_dep,07:55,2,"Mon,Thu,Sat",,
+69186,VG-ADI MEMU,up,1,08:33,513,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ABD_dep,08:31,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+11466,JBP SOMNATH EXP,down,0,08:36,516,"Tue,Sat",2,CLDY_dep,08:31,2,"Mon,Fri",,
+11464,JBP SOMNATH EXP,down,0,08:36,516,"Mon,Wed,Thu,Fri,Sun",5,CLDY_dep,08:31,2,"Tue,Wed,Thu,Sat,Sun",,
+12756,BVC COA SF EXP,up,0,08:52,532,Sat,1,VG_dep,08:17,1,Sat,,
+19568,VIVEK EXPRESS,up,0,08:52,532,Fri,1,VG_dep,08:17,1,Fri,,
+16613,RJT CBE EXP,up,0,08:52,532,Sun,1,VG_dep,08:17,1,Sun,,
+20968,PBR SC SF EXP,up,0,08:52,532,Tue,1,VG_dep,08:17,1,Tue,,
+22717,RJT SC SUP EXP,up,0,08:52,532,"Mon,Wed,Thu",3,VG_dep,08:17,1,"Mon,Wed,Thu",,
+12950,KAVIGURU EXP,down,0,09:02,542,Tue,1,ADI_dep,08:40,3,Sun,,
+19107,JANMABHOOMI EXP,up,1,09:09,549,Sun,1,ABD_dep,09:07,1,Sun,,
+20936,INDB GIMB SF,down,0,09:27,567,Mon,1,ADI_dep,09:05,2,Sun,,
+22960,INTERCITY EXP,up,1,09:47,587,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ABD_dep,09:45,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+22940,BSP OKHA SF EXP,down,0,09:57,597,Tue,1,ADI_dep,09:35,2,Mon,,
+94802,NAMO BHARAT RAPID RAIL,up,1,10:04,604,"Mon,Tue,Wed,Thu,Fri,Sat",6,ABD_dep,10:02,1,"Mon,Tue,Wed,Thu,Fri,Sat",,
+19119,GNC SOMNATH EXP,down,1,10:53,653,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ABD_arr,10:55,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+12478,SVDK JAM EXP,down,0,12:37,757,Mon,1,ADI_dep,12:15,2,Sun,,
+12474,SARVODAYA EXP,down,0,12:37,757,Fri,1,ADI_dep,12:15,2,Thu,,
+12476,SVDK HAPA EXP,down,0,12:37,757,Tue,1,ADI_dep,12:15,2,Mon,,
+20685,GIMB SBC SF EXP,up,0,13:18,798,Tue,1,VG_dep,12:43,1,Tue,,
+12475,HAPA SVDK EXP,up,0,13:32,812,Tue,1,VG_dep,12:57,1,Tue,,
+12473,SARVODAYA EXP,up,0,13:32,812,Sat,1,VG_dep,12:57,1,Sat,,
+12477,JAM SVDK EXP,up,0,13:32,812,Wed,1,VG_dep,12:57,1,Wed,,
+20967,SC PBR SF EXP,down,0,13:47,827,Thu,1,ADI_dep,13:25,2,Wed,,
+12755,COA BVC SF EXP,down,0,13:57,837,Fri,1,ADI_dep,13:35,2,Thu,,
+22718,RAJKOT SF EXP,down,0,13:57,837,"Tue,Wed,Sun",3,ADI_dep,13:35,2,"Mon,Tue,Sat",,
+16614,CBE RJT EXP,down,0,13:57,837,Sat,1,ADI_dep,13:35,2,Fri,,
+15636,GHY OKHA EXP,down,0,14:12,852,Wed,1,ADI_dep,13:50,3,Mon,,
+15668,KYQ GIMB EXP,down,0,14:12,852,Fri,1,ADI_dep,13:50,3,Wed,,
+16333,VRL TVC EXP,up,0,14:42,882,Thu,1,VG_dep,14:07,1,Thu,,
+16335,GIMB NCJ EXP,up,0,14:42,882,Fri,1,VG_dep,14:07,1,Fri,,
+16337,OKHA ERS EXP,up,0,14:42,882,"Mon,Sat",2,VG_dep,14:07,1,"Mon,Sat",,
+19120,SOMNATH GNC EXP,up,1,14:59,899,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ABD_dep,14:57,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+12905,SHALIMAR SF EXP,up,0,16:47,1007,"Wed,Thu",2,VG_dep,16:12,1,"Wed,Thu",,
+12949,KAVIGURU EXP,up,0,16:47,1007,Fri,1,VG_dep,16:12,1,Fri,,
+22905,OKHA SHM SF EXP,up,0,16:47,1007,Sun,1,VG_dep,16:12,1,Sun,,
+16734,OKHA RMM EXP,up,0,16:47,1007,Tue,1,VG_dep,16:12,1,Tue,,
+22937,RAJKOT REWA SF,up,0,17:32,1052,Sun,1,VG_dep,16:57,1,Sun,,
+11463,SMNH JBP EXP,up,0,17:43,1063,"Tue,Wed,Thu,Fri,Sun",5,CLDY_arr,17:48,1,"Tue,Wed,Thu,Fri,Sun",,
+11465,SMNH JBP EXP,up,0,17:43,1063,"Mon,Sat",2,CLDY_arr,17:48,1,"Mon,Sat",,
+94801,NAMO BHARAT RAPID RAIL,down,1,17:46,1066,"Mon,Tue,Wed,Thu,Fri,Sun",6,ABD_arr,17:48,1,"Mon,Tue,Wed,Thu,Fri,Sun",,
+22973,GIMB PURI SUP,up,0,17:55,1075,Wed,1,VG_dep,17:20,1,Wed,,
+22959,INTERCITY EXP,down,1,18:01,1081,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ABD_arr,18:03,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",19.0,trainspnrstatus_7day
+22938,REWA RJT SUP EXP,down,0,18:07,1087,Tue,1,ADI_dep,17:45,2,Mon,,
+15045,GKP OKHA EXP,down,0,18:12,1092,Fri,1,CLDY_dep,18:07,2,Thu,,
+19567,VIVEK EXPRESS,down,0,18:42,1122,Tue,1,ADI_dep,18:20,3,Sun,,
+11091,BHUJ PUNE SPL,up,0,19:02,1142,Wed,1,VG_dep,18:27,1,Wed,,
+11087,VERAVAL PUNE EXP,up,0,19:02,1142,Sat,1,VG_dep,18:27,1,Sat,,
+69185,ADI-VG MEMU,down,1,19:07,1147,"Mon,Tue,Wed,Thu,Fri,Sun",6,ABD_arr,19:09,1,"Mon,Tue,Wed,Thu,Fri,Sun",,
+19218,SAURASHTRA JANTA,up,0,19:20,1160,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_arr,19:25,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+22946,SAURASHTRA MAIL,up,0,19:37,1177,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_arr,19:42,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",15.0,trainspnrstatus_7day
+15635,GUWAHATI EXPRES,up,0,20:47,1247,Fri,1,VG_dep,20:12,1,Fri,3.0,trainspnrstatus_7day
+15667,KAMAKHYA EXP,up,0,20:47,1247,Sat,1,VG_dep,20:12,1,Sat,,
+19015,SAURASHTRA EXP,down,0,20:50,1250,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_dep,20:45,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",29.0,trainspnrstatus_7day
+14312,BHUJ BE EXP,up,0,22:11,1331,"Tue,Wed,Fri",3,CLDY_arr,22:16,1,"Tue,Wed,Fri",,
+22957,SOMNATH EXPRESS,down,0,22:17,1337,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_dep,22:12,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",,
+12941,PARASNATH EXP,up,0,22:22,1342,Tue,1,VG_dep,21:47,1,Tue,,
+22964,BVC BDTS SFAST,up,0,22:22,1342,Sun,1,VG_dep,21:47,1,Sun,,
+22969,OKHA BSBS SF EXP,up,0,22:22,1342,Thu,1,VG_dep,21:47,1,Thu,20.0,trainspnrstatus_7day
+20935,GIMB INDB SF,up,0,22:22,1342,Mon,1,VG_dep,21:47,1,Mon,,
+22926,SBT VANDE BHARAT,up,1,22:44,1364,"Mon,Wed,Thu,Fri,Sat,Sun",6,ABD_dep,22:42,1,"Mon,Wed,Thu,Fri,Sat,Sun",,
+19217,SAURASHTRA JANTA,down,0,22:48,1368,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,CLDY_dep,22:43,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",20.0,trainspnrstatus_7day
+12972,BVC BDTS SF EXP,up,0,22:57,1377,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,VG_dep,22:22,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",10.0,trainspnrstatus_7day
+22951,BDTS GIMB SFAST,down,0,23:07,1387,Fri,1,ADI_dep,22:45,1,Fri,8.0,trainspnrstatus_7day
+22970,BNRS OKHA SF,down,0,23:07,1387,Sun,1,ADI_dep,22:45,2,Sat,,
+20909,TVCN PBR SF EXP,down,0,23:07,1387,Mon,1,ADI_dep,22:45,2,Sun,,
+20938,DEE PBR EXPRESS,down,0,23:10,1390,"Mon,Thu",2,CLDY_dep,23:05,1,"Mon,Thu",,
+20907,SAYAJINAGRI EXP,down,0,23:57,1437,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",7,ADI_dep,23:35,1,"Mon,Tue,Wed,Thu,Fri,Sat,Sun",35.0,trainspnrstatus_7day

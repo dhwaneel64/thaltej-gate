@@ -1,0 +1,17 @@
+{
+  "name": "Thaltej Gate",
+  "short_name": "Thaltej Gate",
+  "description": "Live odds that the Thaltej level crossing is closed, and how long you'd wait.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0f11",
+  "theme_color": "#0b0f11",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

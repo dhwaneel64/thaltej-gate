@@ -1,0 +1,828 @@
+<title>Is the Thaltej Gate Closed?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<style>
+/* ── tokens ─────────────────────────────────────────────────────────────── */
+:root{
+  color-scheme: light;
+  --bg:#e9eeef;            /* platform concrete */
+  --surface:#ffffff;
+  --surface-2:#f4f7f8;
+  --ink:#0f1719;
+  --ink-2:#51636a;
+  --muted:#8a9aa0;
+  --hair:#dde4e6;
+  --rule:#c6d1d4;
+  --accent:#2d6a8e;        /* steel blue — interactive chrome only */
+  --accent-ink:#1f5273;
+  --accent-soft:rgba(45,106,142,.12);
+  --accent-soft-2:rgba(45,106,142,.22);
+  --shadow:0 1px 2px rgba(15,23,25,.05), 0 10px 28px -16px rgba(15,23,25,.28);
+  --shadow-sm:0 1px 2px rgba(15,23,25,.06);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --bg:#0b0f11;
+    --surface:#151b1e;
+    --surface-2:#1a2225;
+    --ink:#e9f0f1;
+    --ink-2:#9fb0b6;
+    --muted:#73858b;
+    --hair:#232d31;
+    --rule:#2f3b40;
+    --accent:#6fa9cd;
+    --accent-ink:#8cbfdf;
+    --accent-soft:rgba(111,169,205,.14);
+    --accent-soft-2:rgba(111,169,205,.26);
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.9);
+    --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --bg:#0b0f11;
+  --surface:#151b1e;
+  --surface-2:#1a2225;
+  --ink:#e9f0f1;
+  --ink-2:#9fb0b6;
+  --muted:#73858b;
+  --hair:#232d31;
+  --rule:#2f3b40;
+  --accent:#6fa9cd;
+  --accent-ink:#8cbfdf;
+  --accent-soft:rgba(111,169,205,.14);
+  --accent-soft-2:rgba(111,169,205,.26);
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 32px -18px rgba(0,0,0,.9);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.35);
+}
+/* signal aspects — fixed in both themes, always paired with a word */
+:root{ --clear:#0ca30c; --caution:#fab219; --danger:#d03b3b; --lamp-dead:#20282b; }
+
+/* ── base ───────────────────────────────────────────────────────────────── */
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"IBM Plex Sans","Segoe UI",system-ui,sans-serif;
+  font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+  padding:18px 14px 56px;
+}
+.wrap{max-width:540px; margin:0 auto; display:flex; flex-direction:column; gap:14px}
+.card{
+  background:var(--surface); border-radius:18px; padding:18px;
+  box-shadow:var(--shadow); border:1px solid var(--hair);
+}
+.eyebrow{
+  font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;
+  font-weight:700; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--muted); margin:0;
+}
+.num{font-family:"IBM Plex Mono",ui-monospace,monospace; font-variant-numeric:tabular-nums}
+button{font:inherit; color:inherit; cursor:pointer}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:6px}
+
+/* ── masthead ───────────────────────────────────────────────────────────── */
+header{display:flex; align-items:flex-start; justify-content:space-between; gap:12px; padding:2px 4px}
+header h1{
+  font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;
+  font-size:17px; font-weight:700; letter-spacing:.01em; margin:0; line-height:1.2;
+}
+header .sub{font-size:12.5px; color:var(--muted); margin:2px 0 0}
+.clock{text-align:right; flex:none}
+.clock .t{font-family:"IBM Plex Mono",monospace; font-size:19px; font-weight:500; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.clock .d{font-size:11px; color:var(--muted); letter-spacing:.06em; text-transform:uppercase}
+
+/* ── aspect card ────────────────────────────────────────────────────────── */
+.aspect{display:flex; gap:18px; align-items:stretch}
+.head{flex:none; width:46px; display:flex; align-items:center; justify-content:center}
+.signal{width:44px; height:112px; display:block}
+.lens{transition:fill .45s ease, opacity .45s ease}
+.readout{min-width:0; flex:1; display:flex; flex-direction:column; justify-content:center; gap:2px}
+.verdict{
+  font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif;
+  font-weight:700; font-size:13px; letter-spacing:.16em; text-transform:uppercase;
+  display:flex; align-items:center; gap:7px;
+}
+.verdict .dot{width:9px; height:9px; border-radius:50%; flex:none; transition:background .45s ease}
+.figure{
+  font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:62px; line-height:1;
+  letter-spacing:-.045em; margin:6px 0 4px; display:flex; align-items:baseline; gap:2px;
+}
+.figure .pct{font-size:30px; font-weight:500; letter-spacing:-.02em}
+.caption{font-size:13.5px; color:var(--ink-2); max-width:30ch; text-wrap:balance}
+.caption b{font-weight:600; color:var(--ink)}
+
+.when{display:flex; align-items:center; gap:8px; margin-top:12px; flex-wrap:wrap}
+.chip{
+  font-family:"IBM Plex Mono",monospace; font-size:12px; font-variant-numeric:tabular-nums;
+  background:var(--surface-2); border:1px solid var(--hair); color:var(--ink-2);
+  padding:4px 9px; border-radius:999px;
+}
+.chip.live{color:var(--accent-ink); background:var(--accent-soft); border-color:transparent}
+button.chip{border-color:var(--accent-soft-2); color:var(--accent-ink); background:var(--accent-soft)}
+button.chip:hover{background:var(--accent-soft-2)}
+
+/* ── figures row ────────────────────────────────────────────────────────── */
+.figs{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:16px; padding-top:16px; border-top:1px solid var(--hair)}
+.fig .k{font-family:"IBM Plex Sans Condensed",sans-serif; font-weight:600; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted)}
+.fig .v{font-family:"IBM Plex Mono",monospace; font-size:25px; font-weight:500; font-variant-numeric:tabular-nums; letter-spacing:-.02em; line-height:1.25}
+.fig .v small{font-size:13px; font-weight:400; color:var(--muted); letter-spacing:0}
+.waitbar{grid-column:1/-1; height:6px; border-radius:3px; background:var(--surface-2); position:relative; overflow:hidden; border:1px solid var(--hair)}
+.waitbar i{position:absolute; top:0; bottom:0; background:var(--accent); opacity:.5; border-radius:3px; transition:left .3s ease,width .3s ease}
+.waitbar u{position:absolute; top:-2px; bottom:-2px; width:2px; background:var(--accent); text-decoration:none; transition:left .3s ease}
+.scalerow{grid-column:1/-1; display:flex; justify-content:space-between; font-size:10.5px; color:var(--muted); font-family:"IBM Plex Mono",monospace; margin-top:-8px}
+
+.cause{margin-top:14px; padding-top:13px; border-top:1px solid var(--hair); font-size:13.5px; color:var(--ink-2); display:flex; gap:9px; align-items:baseline}
+.cause .lbl{font-family:"IBM Plex Sans Condensed",sans-serif; font-weight:600; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); flex:none}
+.cause b{color:var(--ink); font-weight:600}
+
+/* ── strip chart ────────────────────────────────────────────────────────── */
+.striphead{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px; gap:10px}
+.striphead .hint{font-size:11.5px; color:var(--muted)}
+.plot{position:relative; touch-action:none; cursor:ew-resize; user-select:none; -webkit-user-select:none}
+.plot svg{display:block; width:100%; overflow:visible}
+.xaxis{display:flex; justify-content:space-between; margin-top:7px; font-family:"IBM Plex Mono",monospace; font-size:10.5px; color:var(--muted); font-variant-numeric:tabular-nums}
+.tip{
+  position:absolute; pointer-events:none; transform:translate(-50%,-100%);
+  background:var(--ink); color:var(--surface); border-radius:9px; padding:7px 10px;
+  font-size:11.5px; line-height:1.45; white-space:nowrap; box-shadow:var(--shadow);
+  opacity:0; transition:opacity .14s ease; z-index:4;
+}
+.tip.on{opacity:1}
+.tip .tt{font-family:"IBM Plex Mono",monospace; font-weight:600; font-variant-numeric:tabular-nums}
+.legend{display:flex; gap:14px; flex-wrap:wrap; margin-top:11px; font-size:11px; color:var(--muted)}
+.legend span{display:flex; align-items:center; gap:5px}
+.legend i{width:11px; height:3px; border-radius:2px; display:block}
+
+/* ── train rows ─────────────────────────────────────────────────────────── */
+.trains{display:flex; flex-direction:column; gap:0}
+.trow{padding:13px 0; border-top:1px solid var(--hair)}
+.trow:first-of-type{border-top:0; padding-top:4px}
+.tmain{display:flex; align-items:baseline; gap:9px; flex-wrap:wrap}
+.tno{font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:500; color:var(--ink-2); font-variant-numeric:tabular-nums}
+.tnm{font-family:"IBM Plex Sans Condensed","IBM Plex Sans",sans-serif; font-size:15px; font-weight:600;
+     letter-spacing:.03em; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.tdir{font-size:10.5px; color:var(--muted); letter-spacing:.08em; text-transform:uppercase; font-family:"IBM Plex Sans Condensed",sans-serif; font-weight:600}
+.badge{
+  font-family:"IBM Plex Sans Condensed",sans-serif; font-weight:700; font-size:10px;
+  letter-spacing:.1em; text-transform:uppercase; padding:2px 6px; border-radius:5px;
+  background:var(--surface-2); color:var(--muted); border:1px solid var(--hair); flex:none;
+}
+.badge.on{background:var(--accent-soft); color:var(--accent-ink); border-color:transparent}
+.ttime{display:flex; align-items:baseline; gap:7px; margin-top:4px; font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--muted); font-variant-numeric:tabular-nums}
+.ttime b{color:var(--ink); font-weight:500; font-size:13px}
+.ttime .arrow{color:var(--rule)}
+/* overflow:hidden matters — a band can run past either end of the window, and
+   an absolutely-positioned child would otherwise widen the whole page. */
+.track{position:relative; height:12px; margin-top:8px; overflow:hidden}
+.track .band{position:absolute; top:3px; height:6px; border-radius:3px; background:var(--accent); opacity:.26}
+.track .band.soft{opacity:.14}
+.track .med{position:absolute; top:0; height:12px; width:2px; border-radius:1px; background:var(--accent)}
+.track .nowline{position:absolute; top:-1px; bottom:-1px; width:1px; background:var(--rule)}
+.empty{color:var(--muted); font-size:13.5px; padding:4px 0}
+
+/* ── data source bar ────────────────────────────────────────────────────── */
+.srcbar{display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:space-between}
+.srcmsg{font-size:12.5px; color:var(--ink-2); display:flex; align-items:center; gap:8px; min-width:0}
+.pip{width:7px; height:7px; border-radius:50%; background:var(--muted); flex:none}
+.pip.live{background:var(--clear)}
+.switch{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--ink-2); cursor:pointer; flex:none}
+.switch input{appearance:none; width:38px; height:22px; border-radius:11px; background:var(--rule); position:relative; transition:background .2s ease; margin:0; cursor:pointer; flex:none}
+.switch input::after{content:""; position:absolute; top:2px; left:2px; width:18px; height:18px; border-radius:50%; background:var(--surface); transition:left .2s ease; box-shadow:var(--shadow-sm)}
+.switch input:checked{background:var(--accent)}
+.switch input:checked::after{left:18px}
+.switch input:disabled{opacity:.4; cursor:not-allowed}
+
+details{border-top:1px solid var(--hair); margin-top:16px; padding-top:14px}
+details summary{cursor:pointer; font-family:"IBM Plex Sans Condensed",sans-serif; font-weight:600; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); list-style:none}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:" +"; font-family:"IBM Plex Mono",monospace}
+details[open] summary::after{content:" −"}
+details .body{font-size:13px; color:var(--ink-2); margin-top:11px; display:flex; flex-direction:column; gap:9px; max-width:62ch}
+details .body b{color:var(--ink); font-weight:600}
+details .body code{font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--surface-2); padding:1px 5px; border-radius:4px; border:1px solid var(--hair)}
+
+/* ── sync sheet ─────────────────────────────────────────────────────────── */
+.sheet{position:fixed; inset:0; background:rgba(8,12,14,.5); display:none; align-items:flex-end; justify-content:center; z-index:20; padding:0}
+.sheet.on{display:flex}
+.sheet .panel{background:var(--surface); width:100%; max-width:540px; border-radius:20px 20px 0 0; padding:20px 18px calc(20px + env(safe-area-inset-bottom)); display:flex; flex-direction:column; gap:12px; box-shadow:var(--shadow)}
+.sheet textarea{
+  width:100%; min-height:130px; resize:vertical; border-radius:11px; border:1px solid var(--rule);
+  background:var(--surface-2); color:var(--ink); padding:11px;
+  font-family:"IBM Plex Mono",monospace; font-size:11.5px; line-height:1.5;
+}
+.sheet .row{display:flex; gap:9px; justify-content:flex-end}
+.btn{border:1px solid var(--rule); background:var(--surface-2); padding:8px 15px; border-radius:9px; font-size:13.5px; font-weight:500}
+.btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+.btn:disabled{opacity:.5; cursor:not-allowed}
+.sheet .status{font-size:12.5px; color:var(--ink-2); min-height:18px}
+.skeleton{color:var(--muted); font-size:13.5px}
+
+@media (max-width:380px){
+  .figure{font-size:52px}
+  body{padding:14px 10px 48px}
+  .card{padding:15px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; animation:none !important}
+}
+</style>
+
+<div class="wrap">
+
+  <header>
+    <div>
+      <h1>Thaltej level crossing</h1>
+      <p class="sub">Ambli Road &middot; Ahmedabad&ndash;Viramgam line</p>
+    </div>
+    <div class="clock">
+      <div class="t num" id="clockT">&mdash;&mdash;:&mdash;&mdash;</div>
+      <div class="d" id="clockD">IST</div>
+    </div>
+  </header>
+
+  <!-- ── the aspect ─────────────────────────────────────────────────────── -->
+  <section class="card" aria-live="polite">
+    <div class="aspect">
+      <div class="head">
+        <svg class="signal" viewBox="0 0 44 112" role="img" aria-hidden="true">
+          <rect x="7" y="0" width="30" height="112" rx="13" fill="#161c1f"/>
+          <rect x="7.5" y="0.5" width="29" height="111" rx="12.5" fill="none" stroke="#2b3438"/>
+          <circle class="lens" id="lensR" cx="22" cy="22" r="9" fill="var(--lamp-dead)"/>
+          <circle class="lens" id="lensA" cx="22" cy="56" r="9" fill="var(--lamp-dead)"/>
+          <circle class="lens" id="lensG" cx="22" cy="90" r="9" fill="var(--lamp-dead)"/>
+          <circle cx="19" cy="19" r="2.4" fill="#fff" opacity=".10"/>
+          <circle cx="19" cy="53" r="2.4" fill="#fff" opacity=".10"/>
+          <circle cx="19" cy="87" r="2.4" fill="#fff" opacity=".10"/>
+        </svg>
+      </div>
+      <div class="readout">
+        <div class="verdict"><span class="dot" id="vdot"></span><span id="vword">Reading the line&hellip;</span></div>
+        <div class="figure num"><span id="pval">&mdash;&mdash;</span><span class="pct">%</span></div>
+        <p class="caption">chance the gate is down</p>
+      </div>
+    </div>
+
+    <div class="when">
+      <span class="chip live" id="whenChip">right now</span>
+      <button class="chip" id="backNow" hidden>&larr; back to now</button>
+    </div>
+
+    <div class="figs">
+      <div class="fig">
+        <div class="k">Typical wait</div>
+        <div class="v num" id="wTyp">&mdash;<small> min</small></div>
+      </div>
+      <div class="fig">
+        <div class="k">Bad day (p90)</div>
+        <div class="v num" id="wP90">&mdash;<small> min</small></div>
+      </div>
+      <div class="waitbar"><i id="wbFill"></i><u id="wbTick"></u></div>
+      <div class="scalerow"><span>0 min</span><span>if the gate is down</span><span>20 min</span></div>
+    </div>
+
+    <div class="cause"><span class="lbl">Waiting&nbsp;for</span><span id="causeTxt">&mdash;</span></div>
+  </section>
+
+  <!-- ── next 90 minutes ────────────────────────────────────────────────── -->
+  <section class="card">
+    <div class="striphead">
+      <p class="eyebrow">Next 90 minutes</p>
+      <span class="hint" id="stripHint">drag to scrub</span>
+    </div>
+    <div class="plot" id="plot" tabindex="0" role="slider" aria-label="Crossing time in the next 90 minutes"
+         aria-valuemin="0" aria-valuemax="90" aria-valuenow="0">
+      <svg id="chart" height="138" aria-hidden="true"></svg>
+      <div class="tip" id="tip"></div>
+    </div>
+    <div class="xaxis" id="xaxis"></div>
+    <div class="legend">
+      <span><i style="background:var(--accent)"></i>chance the gate is down</span>
+      <span><i style="background:var(--clear);opacity:.45"></i>clearest window</span>
+    </div>
+  </section>
+
+  <!-- ── trains ─────────────────────────────────────────────────────────── -->
+  <section class="card">
+    <div class="striphead">
+      <p class="eyebrow">Trains due <span id="tcount"></span></p>
+      <span class="hint">bar = 80% arrival range</span>
+    </div>
+    <div class="trains" id="trains"><p class="skeleton">Working out the timetable&hellip;</p></div>
+  </section>
+
+  <!-- ── data ───────────────────────────────────────────────────────────── -->
+  <section class="card">
+    <div class="srcbar">
+      <div class="srcmsg"><span class="pip" id="srcPip"></span><span id="srcTxt">Checking for live delays&hellip;</span></div>
+      <label class="switch"><input type="checkbox" id="liveToggle" checked disabled><span>Live delays</span></label>
+    </div>
+    <details>
+      <summary>How this is worked out</summary>
+      <div class="body">
+        <p>Every second, this page replays today <b>4,000 times</b>. Each replay shifts all 110 scheduled
+        trains by a random delay, sprinkles in freight, drops the gate from <b>4&nbsp;min</b> before a
+        through train to 1&nbsp;min after (<b>6&nbsp;min</b> for one that stops at Ambli Road), and keeps
+        the gate down when the next train is due within 2&nbsp;min of it reopening. The numbers above are
+        just how often you were stuck, and for how long.</p>
+        <p>A train with a <b>live</b> delay is placed around that delay, give or take about
+        <b>3 min</b> &mdash; wider if it is badly late or the sighting is old, but never tighter,
+        because a reported delay still has to survive the run to the crossing. Everything else falls
+        back to its 7-day average, and the 90 trains with no recorded average draw one at random from
+        the 20 that have one &mdash; which is why their arrival bars are so wide.</p>
+        <p><b>Freight is a guess.</b> There is no public freight schedule, so the model assumes about 4 a
+        day at 14&nbsp;min each, 60% of them overnight &mdash; fitted to match observed waits, not measured.
+        That is the weakest part of this.</p>
+        <p>Live delays come from railyatri.in, refreshed by running
+        <code>python web_data.py --live</code> and pasting the result into this page. They are
+        crowd-sourced, so treat a quiet train as unknown rather than on time.</p>
+        <p class="num" id="genstamp" style="color:var(--muted);font-size:11.5px"></p>
+      </div>
+    </details>
+    <div class="row" style="display:flex;justify-content:flex-end;margin-top:12px">
+      <button class="btn" id="openSync" hidden>Sync live delays</button>
+    </div>
+  </section>
+</div>
+
+<div class="sheet" id="sheet">
+  <div class="panel" role="dialog" aria-modal="true" aria-label="Sync live delays">
+    <p class="eyebrow">Sync live delays</p>
+    <p style="font-size:13px;color:var(--ink-2);margin:0">
+      Run <span class="num" style="font-size:12px">python web_data.py --live --hours 3</span> and paste the
+      JSON here. Everyone who opens this page sees it.
+    </p>
+    <textarea id="syncBox" spellcheck="false" placeholder='{"fetched_at": "...", "delays": { "22959": {"delay": 5.0, ...} }}'></textarea>
+    <div class="status" id="syncStatus"></div>
+    <div class="row">
+      <button class="btn" id="cancelSync">Cancel</button>
+      <button class="btn primary" id="doSync">Save</button>
+    </div>
+  </div>
+</div>
+
+<script id="schedule" type="application/json">{"generated":"2026-10-22T16:34:14+05:30","params":{"L_pass":4.0,"L_halt":6.0,"merge_gap":2.0,"delay_shape":2.0,"freight_per_day":4.0,"L_freight":14.0,"freight_night_share":0.6},"live_sd":{"base":2.5,"frac":0.25,"age":0.08},"live_max_age_min":180,"pool":[3.0,3.0,5.0,6.0,7.0,7.0,8.0,9.0,9.0,10.0,11.0,11.0,13.0,15.0,19.0,20.0,20.0,29.0,35.0,218.0],"trains":[{"no":"22989","nm":"BDTS MHV EXP","dir":"down","halt":0,"cm":57,"days":40,"avg":11.0},{"no":"22974","nm":"PURI GIMB SF","dir":"down","halt":0,"cm":57,"days":1,"avg":null},{"no":"22963","nm":"BDTS BVC SFAST","dir":"down","halt":0,"cm":57,"days":2,"avg":null},{"no":"20819","nm":"PURI OKHA SF","dir":"down","halt":0,"cm":67,"days":2,"avg":null},{"no":"20803","nm":"VSKP GIMB SF","dir":"down","halt":0,"cm":67,"days":32,"avg":3.0},{"no":"22924","nm":"BDTS HUMSAFAR","dir":"up","halt":0,"cm":72,"days":37,"avg":null},{"no":"22990","nm":"MHV BDTS EXP","dir":"up","halt":0,"cm":72,"days":80,"avg":null},{"no":"16733","nm":"RMM OKHA EXP","dir":"down","halt":0,"cm":87,"days":1,"avg":9.0},{"no":"19256","nm":"MAHUVA SURAT EX","dir":"up","halt":0,"cm":97,"days":47,"avg":null},{"no":"19255","nm":"SURAT MAHUVA EX","dir":"down","halt":0,"cm":102,"days":87,"avg":6.0},{"no":"19559","nm":"TPTY OKHA EXP","dir":"down","halt":0,"cm":102,"days":32,"avg":null},{"no":"22955","nm":"KUTCH EXPRESS","dir":"down","halt":0,"cm":112,"days":127,"avg":13.0},{"no":"22956","nm":"KUTCH EXPRESS","dir":"up","halt":0,"cm":123,"days":127,"avg":null},{"no":"20910","nm":"PBR TVCN SF EXP","dir":"up","halt":0,"cm":145,"days":16,"avg":null},{"no":"22908","nm":"HAPA MAO SF EXP","dir":"up","halt":0,"cm":145,"days":8,"avg":null},{"no":"12971","nm":"BDTS BVC SF EXP","dir":"down","halt":0,"cm":182,"days":127,"avg":11.0},{"no":"22939","nm":"OKHA BSP SF EXP","dir":"up","halt":0,"cm":197,"days":64,"avg":null},{"no":"22952","nm":"GIMB BDTS SFAST","dir":"up","halt":0,"cm":197,"days":16,"avg":null},{"no":"20804","nm":"GIMB VSKP SF EX","dir":"up","halt":0,"cm":197,"days":1,"avg":null},{"no":"20820","nm":"OKHA PURI EXP","dir":"up","halt":0,"cm":197,"days":8,"avg":null},{"no":"14311","nm":"ALA HAZRAT EXP","dir":"down","halt":0,"cm":225,"days":84,"avg":null},{"no":"12942","nm":"PARASNATH EXP","dir":"down","halt":0,"cm":237,"days":32,"avg":5.0},{"no":"19108","nm":"BHAVNAGAR EXP","dir":"down","halt":1,"cm":238,"days":4,"avg":null},{"no":"20937","nm":"PBR DEE EXPRESS","dir":"up","halt":0,"cm":240,"days":68,"avg":null},{"no":"19269","nm":"PBR MFP EXPRESS","dir":"up","halt":0,"cm":240,"days":48,"avg":null},{"no":"20908","nm":"SAYAJINAGRI EXP","dir":"up","halt":0,"cm":252,"days":127,"avg":null},{"no":"22907","nm":"MAO HAPA SF EXP","dir":"down","halt":0,"cm":252,"days":32,"avg":7.0},{"no":"19270","nm":"PBR EXPRESS","dir":"down","halt":0,"cm":283,"days":6,"avg":null},{"no":"22958","nm":"SOMNATH EXPRESS","dir":"up","halt":0,"cm":296,"days":127,"avg":null},{"no":"22945","nm":"SAURASHTRA MAIL","dir":"down","halt":0,"cm":331,"days":127,"avg":7.0},{"no":"20686","nm":"SBC GIMB SF EXP","dir":"down","halt":0,"cm":362,"days":1,"avg":9.0},{"no":"22925","nm":"OKHA VANDE BHARAT","dir":"down","halt":1,"cm":381,"days":125,"avg":null},{"no":"22906","nm":"SHM OKHA SF EXP","dir":"down","halt":0,"cm":387,"days":8,"avg":null},{"no":"12906","nm":"SHM PBR SUF EXP","dir":"down","halt":0,"cm":387,"days":65,"avg":218.0},{"no":"19016","nm":"SAURASHTRA EXP","dir":"up","halt":0,"cm":393,"days":127,"avg":null},{"no":"16334","nm":"TVC VRL EXP","dir":"down","halt":0,"cm":432,"days":4,"avg":null},{"no":"16338","nm":"ERS OKHA EXP","dir":"down","halt":0,"cm":432,"days":80,"avg":null},{"no":"16336","nm":"NCJ GIMB EXP","dir":"down","halt":0,"cm":432,"days":8,"avg":null},{"no":"15046","nm":"OKHA GKP EXP","dir":"up","halt":0,"cm":447,"days":1,"avg":null},{"no":"19560","nm":"OKHA TPTY EXP","dir":"up","halt":0,"cm":447,"days":2,"avg":null},{"no":"11092","nm":"PUNE BHUJ EXP","dir":"down","halt":0,"cm":472,"days":2,"avg":null},{"no":"11088","nm":"PUNE VRL EXP","dir":"down","halt":0,"cm":477,"days":16,"avg":null},{"no":"22923","nm":"JAM HUMSAFAR","dir":"down","halt":0,"cm":497,"days":82,"avg":null},{"no":"69186","nm":"VG-ADI MEMU","dir":"up","halt":1,"cm":513,"days":127,"avg":null},{"no":"11466","nm":"JBP SOMNATH EXP","dir":"down","halt":0,"cm":516,"days":34,"avg":null},{"no":"11464","nm":"JBP SOMNATH EXP","dir":"down","halt":0,"cm":516,"days":93,"avg":null},{"no":"12756","nm":"BVC COA SF EXP","dir":"up","halt":0,"cm":532,"days":32,"avg":null},{"no":"19568","nm":"VIVEK EXPRESS","dir":"up","halt":0,"cm":532,"days":16,"avg":null},{"no":"16613","nm":"RJT CBE EXP","dir":"up","halt":0,"cm":532,"days":64,"avg":null},{"no":"20968","nm":"PBR SC SF EXP","dir":"up","halt":0,"cm":532,"days":2,"avg":null},{"no":"22717","nm":"RJT SC SUP EXP","dir":"up","halt":0,"cm":532,"days":13,"avg":null},{"no":"12950","nm":"KAVIGURU EXP","dir":"down","halt":0,"cm":542,"days":2,"avg":null},{"no":"19107","nm":"JANMABHOOMI EXP","dir":"up","halt":1,"cm":549,"days":64,"avg":null},{"no":"20936","nm":"INDB GIMB SF","dir":"down","halt":0,"cm":567,"days":1,"avg":null},{"no":"22960","nm":"INTERCITY EXP","dir":"up","halt":1,"cm":587,"days":127,"avg":null},{"no":"22940","nm":"BSP OKHA SF EXP","dir":"down","halt":0,"cm":597,"days":2,"avg":null},{"no":"94802","nm":"NAMO BHARAT RAPID RAIL","dir":"up","halt":1,"cm":604,"days":63,"avg":null},{"no":"19119","nm":"GNC SOMNATH EXP","dir":"down","halt":1,"cm":653,"days":127,"avg":null},{"no":"12478","nm":"SVDK JAM EXP","dir":"down","halt":0,"cm":757,"days":1,"avg":null},{"no":"12474","nm":"SARVODAYA EXP","dir":"down","halt":0,"cm":757,"days":16,"avg":null},{"no":"12476","nm":"SVDK HAPA EXP","dir":"down","halt":0,"cm":757,"days":2,"avg":null},{"no":"20685","nm":"GIMB SBC SF EXP","dir":"up","halt":0,"cm":798,"days":2,"avg":null},{"no":"12475","nm":"HAPA SVDK EXP","dir":"up","halt":0,"cm":812,"days":2,"avg":null},{"no":"12473","nm":"SARVODAYA EXP","dir":"up","halt":0,"cm":812,"days":32,"avg":null},{"no":"12477","nm":"JAM SVDK EXP","dir":"up","halt":0,"cm":812,"days":4,"avg":null},{"no":"20967","nm":"SC PBR SF EXP","dir":"down","halt":0,"cm":827,"days":8,"avg":null},{"no":"12755","nm":"COA BVC SF EXP","dir":"down","halt":0,"cm":837,"days":16,"avg":null},{"no":"22718","nm":"RAJKOT SF EXP","dir":"down","halt":0,"cm":837,"days":70,"avg":null},{"no":"16614","nm":"CBE RJT EXP","dir":"down","halt":0,"cm":837,"days":32,"avg":null},{"no":"15636","nm":"GHY OKHA EXP","dir":"down","halt":0,"cm":852,"days":4,"avg":null},{"no":"15668","nm":"KYQ GIMB EXP","dir":"down","halt":0,"cm":852,"days":16,"avg":null},{"no":"16333","nm":"VRL TVC EXP","dir":"up","halt":0,"cm":882,"days":8,"avg":null},{"no":"16335","nm":"GIMB NCJ EXP","dir":"up","halt":0,"cm":882,"days":16,"avg":null},{"no":"16337","nm":"OKHA ERS EXP","dir":"up","halt":0,"cm":882,"days":33,"avg":null},{"no":"19120","nm":"SOMNATH GNC EXP","dir":"up","halt":1,"cm":899,"days":127,"avg":null},{"no":"12905","nm":"SHALIMAR SF EXP","dir":"up","halt":0,"cm":1007,"days":12,"avg":null},{"no":"12949","nm":"KAVIGURU EXP","dir":"up","halt":0,"cm":1007,"days":16,"avg":null},{"no":"22905","nm":"OKHA SHM SF EXP","dir":"up","halt":0,"cm":1007,"days":64,"avg":null},{"no":"16734","nm":"OKHA RMM EXP","dir":"up","halt":0,"cm":1007,"days":2,"avg":null},{"no":"22937","nm":"RAJKOT REWA SF","dir":"up","halt":0,"cm":1052,"days":64,"avg":null},{"no":"11463","nm":"SMNH JBP EXP","dir":"up","halt":0,"cm":1063,"days":94,"avg":null},{"no":"11465","nm":"SMNH JBP EXP","dir":"up","halt":0,"cm":1063,"days":33,"avg":null},{"no":"94801","nm":"NAMO BHARAT RAPID RAIL","dir":"down","halt":1,"cm":1066,"days":95,"avg":null},{"no":"22973","nm":"GIMB PURI SUP","dir":"up","halt":0,"cm":1075,"days":4,"avg":null},{"no":"22959","nm":"INTERCITY EXP","dir":"down","halt":1,"cm":1081,"days":127,"avg":19.0},{"no":"22938","nm":"REWA RJT SUP EXP","dir":"down","halt":0,"cm":1087,"days":2,"avg":null},{"no":"15045","nm":"GKP OKHA EXP","dir":"down","halt":0,"cm":1092,"days":16,"avg":null},{"no":"19567","nm":"VIVEK EXPRESS","dir":"down","halt":0,"cm":1122,"days":2,"avg":null},{"no":"11091","nm":"BHUJ PUNE SPL","dir":"up","halt":0,"cm":1142,"days":4,"avg":null},{"no":"11087","nm":"VERAVAL PUNE EXP","dir":"up","halt":0,"cm":1142,"days":32,"avg":null},{"no":"69185","nm":"ADI-VG MEMU","dir":"down","halt":1,"cm":1147,"days":95,"avg":null},{"no":"19218","nm":"SAURASHTRA JANTA","dir":"up","halt":0,"cm":1160,"days":127,"avg":null},{"no":"22946","nm":"SAURASHTRA MAIL","dir":"up","halt":0,"cm":1177,"days":127,"avg":15.0},{"no":"15635","nm":"GUWAHATI EXPRES","dir":"up","halt":0,"cm":1247,"days":16,"avg":3.0},{"no":"15667","nm":"KAMAKHYA EXP","dir":"up","halt":0,"cm":1247,"days":32,"avg":null},{"no":"19015","nm":"SAURASHTRA EXP","dir":"down","halt":0,"cm":1250,"days":127,"avg":29.0},{"no":"14312","nm":"BHUJ BE EXP","dir":"up","halt":0,"cm":1331,"days":22,"avg":null},{"no":"22957","nm":"SOMNATH EXPRESS","dir":"down","halt":0,"cm":1337,"days":127,"avg":null},{"no":"12941","nm":"PARASNATH EXP","dir":"up","halt":0,"cm":1342,"days":2,"avg":null},{"no":"22964","nm":"BVC BDTS SFAST","dir":"up","halt":0,"cm":1342,"days":64,"avg":null},{"no":"22969","nm":"OKHA BSBS SF EXP","dir":"up","halt":0,"cm":1342,"days":8,"avg":20.0},{"no":"20935","nm":"GIMB INDB SF","dir":"up","halt":0,"cm":1342,"days":1,"avg":null},{"no":"22926","nm":"SBT VANDE BHARAT","dir":"up","halt":1,"cm":1364,"days":125,"avg":null},{"no":"19217","nm":"SAURASHTRA JANTA","dir":"down","halt":0,"cm":1368,"days":127,"avg":20.0},{"no":"12972","nm":"BVC BDTS SF EXP","dir":"up","halt":0,"cm":1377,"days":127,"avg":10.0},{"no":"22951","nm":"BDTS GIMB SFAST","dir":"down","halt":0,"cm":1387,"days":16,"avg":8.0},{"no":"22970","nm":"BNRS OKHA SF","dir":"down","halt":0,"cm":1387,"days":64,"avg":null},{"no":"20909","nm":"TVCN PBR SF EXP","dir":"down","halt":0,"cm":1387,"days":1,"avg":null},{"no":"20938","nm":"DEE PBR EXPRESS","dir":"down","halt":0,"cm":1390,"days":9,"avg":null},{"no":"20907","nm":"SAYAJINAGRI EXP","dir":"down","halt":0,"cm":1437,"days":127,"avg":35.0}]}</script>
+<script>
+"use strict";
+/* ══ model ════════════════════════════════════════════════════════════════
+   A direct port of crossing_sim.py. Same parameters, same gamma-delay model,
+   same closure merge — run over a 91-minute window instead of a whole day.   */
+const DATA   = JSON.parse(document.getElementById("schedule").textContent);
+const DAYS   = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
+const P      = DATA.params;
+const POOL   = DATA.pool;
+const POOLMAX= Math.max.apply(null, POOL);
+const LSD    = DATA.live_sd;          // {base, frac, age} — see LIVE_SD_BASE in crossing_sim.py
+const DAYMIN = 1440;
+const REPS   = 4000;
+const HORIZON= 90;          // minutes shown ahead
+const PAD    = 90;          // closure-merge padding either side of the window
+const LIVE_MAX_AGE_H = DATA.live_max_age_min/60;   // older than this stops being "live"
+
+/* Spread to put on a live delay: floored, so an on-time train is never treated
+   as known to the second, and widening with the delay and the report's age. */
+function liveSd(delay, age){
+  const a=Math.max(0, age||0);
+  return Math.sqrt(LSD.base*LSD.base + Math.pow(LSD.frac*delay,2) + Math.pow(LSD.age*a,2));
+}
+/* One draw of a train's time at the crossing. */
+function drawTime(c){
+  if(c.live!=null) return c.cm + Math.max(0, c.live + gauss()*c.sd);
+  let avg = c.t.avg!=null ? c.t.avg : POOL[(rnd()*POOL.length)|0];
+  if(avg<1) avg=1;
+  return c.cm + gammaStd(P.delay_shape)*(avg/P.delay_shape);
+}
+
+/* — random — deterministic per recompute, so scrubbing never jitters — */
+let _s = 1;
+function seed(n){ _s = n>>>0; _gauss = null; }
+function rnd(){ _s|=0; _s=_s+0x6D2B79F5|0; let t=Math.imul(_s^_s>>>15,1|_s); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }
+let _gauss = null;
+function gauss(){
+  if(_gauss!==null){ const g=_gauss; _gauss=null; return g; }
+  let u=0,v=0; while(u===0)u=rnd(); while(v===0)v=rnd();
+  const r=Math.sqrt(-2*Math.log(u)), th=2*Math.PI*v;
+  _gauss = r*Math.sin(th); return r*Math.cos(th);
+}
+function gammaStd(k){            // Marsaglia–Tsang, shape >= 1
+  const d=k-1/3, c=1/Math.sqrt(9*d);
+  for(;;){
+    let x,v;
+    do{ x=gauss(); v=1+c*x; }while(v<=0);
+    v=v*v*v; const u=rnd();
+    if(u < 1-0.0331*x*x*x*x) return d*v;
+    if(Math.log(u) < 0.5*x*x + d*(1-v+Math.log(v))) return d*v;
+  }
+}
+function poisson(l){ if(l<=0)return 0; const L=Math.exp(-l); let k=0,p=1; do{k++;p*=rnd();}while(p>L); return k-1; }
+
+/* — clock, always Asia/Kolkata — */
+const IST = new Intl.DateTimeFormat("en-GB",{timeZone:"Asia/Kolkata",weekday:"short",
+  day:"2-digit",month:"short",hour:"2-digit",minute:"2-digit",hour12:false});
+function istNow(){
+  const p={}; for(const x of IST.formatToParts(new Date())) p[x.type]=x.value;
+  return { wd:DAYS.indexOf(p.weekday), min:(+p.hour)*60+(+p.minute),
+           label:p.hour+":"+p.minute, date:p.day+" "+p.month };
+}
+const hhmm = m => { m=((Math.round(m)%DAYMIN)+DAYMIN)%DAYMIN;
+  return String((m/60)|0).padStart(2,"0")+":"+String(m%60).padStart(2,"0"); };
+
+/* — which trains could possibly matter in this window — */
+function candidates(wd, winStart, winEnd){
+  const out=[];
+  for(let k=-1;k<=1;k++){
+    const bit = 1 << (((wd+k)%7)+7)%7;
+    for(const t of DATA.trains){
+      if(!(t.days & bit)) continue;
+      const cm = t.cm + k*DAYMIN;
+      if(cm > winEnd+PAD) continue;                        // delays only push later
+      const reach = Math.min(600, Math.max(30, (t.avg==null?POOLMAX:t.avg)*6));
+      if(cm + reach < winStart-PAD) continue;
+      out.push({t:t, cm:cm, live:null, sd:0, id:out.length});
+    }
+  }
+  return out;
+}
+
+/* — the simulation — */
+function run(cand, winStart, L){
+  const lo = winStart-PAD, hi = winStart+L+PAD;
+  const n = cand.length;
+  const closed = new Int32Array(L), wsum = new Float64Array(L);
+  const waits  = new Float32Array(REPS*L);
+  const cause  = new Int32Array(L*(n+1));                  // last slot = freight
+  const wNight = P.freight_night_share/8, wDay = (1-P.freight_night_share)/16;
+  const h0 = Math.floor(lo/60), h1 = Math.floor(hi/60);
+  const A=new Float64Array(n+16), B=new Float64Array(n+16), ID=new Int32Array(n+16);
+  const ord=new Int32Array(n+16);
+
+  seed(0x5eed51);
+  for(let r=0;r<REPS;r++){
+    let m=0;
+    for(let i=0;i<n;i++){
+      const c=cand[i];
+      const t = drawTime(c);
+      const len = c.t.halt===1 ? P.L_halt : P.L_pass;
+      const a = t-(len-1), b = t+1;
+      if(b<lo || a>hi) continue;
+      A[m]=a; B[m]=b; ID[m]=i; m++;
+    }
+    for(let h=h0;h<=h1;h++){                               // freight, hour by hour
+      const hod=((h%24)+24)%24;
+      const nf = poisson(P.freight_per_day*((hod>=22||hod<6)?wNight:wDay));
+      for(let f=0;f<nf;f++){
+        const t=h*60+rnd()*60, a=t-(P.L_freight-1), b=t+1;
+        if(b<lo || a>hi) continue;
+        if(m>=A.length) break;
+        A[m]=a; B[m]=b; ID[m]=n; m++;
+      }
+    }
+    for(let i=0;i<m;i++) ord[i]=i;
+    const sl=ord.subarray(0,m); Array.prototype.sort.call(sl,(x,y)=>A[x]-A[y]);
+
+    // merge, then walk the minutes alongside the merged blocks
+    let bi=0, ba=0, bb=0, bid=0, open=false;
+    const row=r*L;
+    let mi=0;
+    const flush=()=>{
+      while(mi<L){
+        const mid=winStart+mi+0.5;
+        if(mid<ba) { mi++; continue; }
+        if(mid>=bb) break;
+        waits[row+mi]=bb-mid; closed[mi]++; wsum[mi]+=bb-mid; cause[mi*(n+1)+bid]++;
+        mi++;
+      }
+    };
+    for(let i=0;i<m;i++){
+      const k=sl[i];
+      if(open && A[k] <= bb + P.merge_gap){
+        if(B[k]>bb){ bb=B[k]; bid=ID[k]; }
+      }else{
+        if(open) flush();
+        ba=A[k]; bb=B[k]; bid=ID[k]; open=true;
+      }
+    }
+    if(open) flush();
+  }
+
+  // per-minute summary
+  const scratch=new Float32Array(REPS);
+  const out=[];
+  for(let i=0;i<L;i++){
+    const c=closed[i];
+    let p90=0, mean=0, best=-1, bestC=0;
+    if(c>0){
+      mean=wsum[i]/c;
+      let j=0; for(let r=0;r<REPS;r++){ const w=waits[r*L+i]; if(w>0) scratch[j++]=w; }
+      const a=scratch.subarray(0,j); Array.prototype.sort.call(a,(x,y)=>x-y);
+      const q=0.9*(j-1), f=Math.floor(q);
+      p90 = f+1<j ? a[f]+(a[f+1]-a[f])*(q-f) : a[j-1];
+      for(let k=0;k<=n;k++){ const v=cause[i*(n+1)+k]; if(v>bestC){bestC=v;best=k;} }
+    }
+    out.push({p:c/REPS, mean:mean, p90:p90, cause:best, causeShare:c? bestC/c : 0});
+  }
+  return out;
+}
+
+/* — per-train arrival spread, for the timetable bars — */
+function band(c){
+  const N=1200, xs=new Float64Array(N);
+  seed(0xb00b+c.id*7919);
+  for(let i=0;i<N;i++) xs[i]=drawTime(c);
+  Array.prototype.sort.call(xs,(a,b)=>a-b);
+  return { lo:xs[(0.10*N)|0], mid:xs[(0.50*N)|0], hi:xs[(0.90*N)|0] };
+}
+
+/* ══ state ════════════════════════════════════════════════════════════════ */
+const ASPECTS=[
+  {max:0.15, word:"Clear road",    color:"var(--clear)",   lens:"lensG"},
+  {max:0.40, word:"Caution",       color:"var(--caution)", lens:"lensA"},
+  {max:1.01, word:"Expect a wait", color:"var(--danger)",  lens:"lensR"}
+];
+let now=istNow(), winStart=now.min, L=HORIZON+1;
+let cand=[], series=[], bands=[], bestBand=null;
+let sel=0, pinnedAbs=null;            // pinnedAbs = an absolute IST minute, so a pin survives the clock
+let liveDoc=null, useLive=true, dbRef=null, dbState="pending";
+
+function applyLive(){
+  const d=(liveDoc&&liveDoc.delays)||{};
+  const fresh = liveDoc && useLive && (Date.now()-Date.parse(liveDoc.fetched_at))/3600000 < LIVE_MAX_AGE_H;
+  for(const c of cand){
+    const rec = fresh ? d[c.t.no] : null;
+    const near = c.cm >= winStart-60 && c.cm <= winStart+L+60;   // this run, not tomorrow's
+    const on = rec && rec.delay!=null && near;
+    c.live = on ? rec.delay : null;
+    c.sd   = on ? liveSd(rec.delay, rec.age) : 0;
+  }
+  return fresh;
+}
+
+function recompute(){
+  now=istNow(); winStart=now.min;
+  cand=candidates(now.wd, winStart, winStart+L-1);
+  const fresh=applyLive();
+  series=run(cand, winStart, L);
+  bands=cand.map(c=>({c:c, b:band(c)}));
+  // the clearest stretch: unconditional expected wait, minimised
+  // Only worth pointing out a clear window when there is something to avoid,
+  // and when it is actually a window rather than most of the hour.
+  const ew=series.map(s=>s.p*s.mean);
+  const lowest=Math.min.apply(null,ew), thr=lowest+0.25;
+  let bi=-1,bl=0,ci=-1,cl=0;
+  for(let i=0;i<L;i++){
+    if(ew[i]<=thr){ if(ci<0)ci=i; cl++; if(cl>bl){bl=cl;bi=ci;} } else { ci=-1; cl=0; }
+  }
+  const worst=Math.max.apply(null,series.map(s=>s.p));
+  bestBand = (bl>=5 && bl<=L*0.7 && worst>=0.2) ? {from:bi, to:bi+bl-1} : null;
+  if(pinnedAbs===null) sel=0;
+  else{
+    const i=pinnedAbs-winStart;
+    if(i<0||i>=L){ pinnedAbs=null; sel=0; } else sel=i;   // the pinned minute has passed
+  }
+  paintSource(fresh);
+  paintAll();
+}
+
+/* ══ paint ════════════════════════════════════════════════════════════════ */
+const $=id=>document.getElementById(id);
+
+function paintAll(){ paintAspect(); paintChart(); paintTrains(); paintClock(); }
+
+function paintClock(){
+  $("clockT").textContent=now.label;
+  $("clockD").textContent=DAYS[now.wd]+" "+now.date+" IST";
+}
+
+function paintAspect(){
+  const s=series[sel]; if(!s) return;
+  const a=ASPECTS.find(x=>s.p<x.max);
+  for(const id of ["lensR","lensA","lensG"]) $(id).setAttribute("fill","var(--lamp-dead)");
+  $(a.lens).setAttribute("fill",a.color);
+  $("vword").textContent=a.word;
+  $("vdot").style.background=a.color;
+  $("pval").textContent=Math.round(s.p*100);
+
+  $("whenChip").textContent = sel===0 ? "right now" : "at "+hhmm(winStart+sel)+"  ·  in "+sel+" min";
+  $("whenChip").classList.toggle("live", sel===0);
+  $("backNow").hidden = (sel===0);
+
+  $("wTyp").innerHTML = (s.p>0? s.mean.toFixed(1):"0")+"<small> min</small>";
+  $("wP90").innerHTML = (s.p>0? s.p90.toFixed(1):"0")+"<small> min</small>";
+  const pc=v=>Math.max(0,Math.min(100,v/20*100));
+  $("wbFill").style.left=pc(0)+"%"; $("wbFill").style.width=pc(s.p90)+"%";
+  $("wbTick").style.left=pc(s.mean)+"%";
+
+  let txt="nothing — the line is clear";
+  if(s.p>0.02 && s.cause>=0){
+    if(s.cause>=cand.length) txt="freight, most likely <span style=\"color:var(--muted)\">(modelled, not timetabled)</span>";
+    else{
+      const c=cand[s.cause];
+      txt="<b>"+c.t.no+"</b> "+c.t.nm+(s.causeShare<0.45? " <span style=\"color:var(--muted)\">or another</span>":"");
+    }
+  }
+  $("causeTxt").innerHTML=txt;
+  $("plot").setAttribute("aria-valuenow",sel);
+  $("plot").setAttribute("aria-valuetext",hhmm(winStart+sel)+", "+Math.round(s.p*100)+" percent chance closed");
+}
+
+let plotW=0;
+function paintChart(){
+  if(!series.length) return;
+  const svg=$("chart"); plotW=$("plot").clientWidth||320;
+  const H=138, padT=14, padB=6, h=H-padT-padB;
+  const maxP=Math.max.apply(null,series.map(s=>s.p));
+  const yMax=Math.max(0.4, Math.min(1, Math.ceil((maxP+0.1)*10)/10));
+  const X=i=>i/(L-1)*plotW, Y=p=>padT+h-(p/yMax)*h;
+
+  let d="M0,"+(padT+h);
+  for(let i=0;i<L;i++) d+="L"+X(i).toFixed(2)+","+Y(series[i].p).toFixed(2);
+  const area=d+"L"+plotW+","+(padT+h)+"Z";
+  const line="M"+series.map((s,i)=>X(i).toFixed(2)+","+Y(s.p).toFixed(2)).join("L");
+
+  let grid="";
+  for(const g of [0.5,1]){
+    const y=Y(yMax*g).toFixed(1);
+    grid+='<line x1="0" y1="'+y+'" x2="'+plotW+'" y2="'+y+'" stroke="var(--hair)" stroke-width="1"/>'+
+          '<text x="2" y="'+(y-4)+'" fill="var(--muted)" font-size="9.5" font-family="IBM Plex Mono,monospace">'+Math.round(yMax*g*100)+'%</text>';
+  }
+  let good="";
+  if(bestBand){
+    const x0=X(bestBand.from), x1=X(bestBand.to);
+    good='<rect x="'+x0.toFixed(1)+'" y="'+padT+'" width="'+Math.max(2,x1-x0).toFixed(1)+'" height="'+h+'" fill="var(--clear)" opacity="0.09"/>'+
+         '<line x1="'+x0.toFixed(1)+'" y1="'+(padT+h)+'" x2="'+x1.toFixed(1)+'" y2="'+(padT+h)+'" stroke="var(--clear)" stroke-width="3" stroke-linecap="round" opacity="0.5"/>';
+  }
+  const xs=X(sel), ys=Y(series[sel].p);
+  svg.setAttribute("viewBox","0 0 "+plotW+" "+H);
+  svg.setAttribute("width",plotW);
+  svg.innerHTML=
+    '<defs><linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">'+
+    '<stop offset="0%" stop-color="var(--accent)" stop-opacity="0.30"/>'+
+    '<stop offset="100%" stop-color="var(--accent)" stop-opacity="0.03"/></linearGradient></defs>'+
+    grid+good+
+    '<path d="'+area+'" fill="url(#fade)"/>'+
+    '<path d="'+line+'" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>'+
+    '<line x1="0" y1="'+(padT+h)+'" x2="'+plotW+'" y2="'+(padT+h)+'" stroke="var(--rule)" stroke-width="1"/>'+
+    '<line x1="'+xs.toFixed(1)+'" y1="'+padT+'" x2="'+xs.toFixed(1)+'" y2="'+(padT+h)+'" stroke="var(--accent)" stroke-width="1" opacity="0.5"/>'+
+    '<circle cx="'+xs.toFixed(1)+'" cy="'+ys.toFixed(1)+'" r="5.5" fill="var(--accent)" stroke="var(--surface)" stroke-width="2"/>';
+
+  const ax=$("xaxis"); ax.innerHTML="";
+  for(let i=0;i<=HORIZON;i+=15){
+    const el=document.createElement("span");
+    el.textContent = i===0 ? "now" : hhmm(winStart+i);
+    ax.appendChild(el);
+  }
+  const tip=$("tip"), s=series[sel];
+  tip.innerHTML='<span class="tt">'+hhmm(winStart+sel)+'</span> &middot; '+Math.round(s.p*100)+'% closed'+
+    (s.p>0? '<br><span class="tt">'+s.mean.toFixed(1)+' min</span> typical wait' : '');
+  tip.style.left=Math.max(52,Math.min(plotW-52,xs))+"px";
+  tip.style.top=(ys-12)+"px";
+}
+
+/* The trains on screen — scheduled or likely to arrive inside the window.
+   paintSource() counts live coverage over this same list, so they agree. */
+function visibleTrains(){
+  return bands.filter(x => (x.b.mid>=winStart-12 && x.b.mid<=winStart+L+12) ||
+                           (x.c.cm >=winStart-12 && x.c.cm <=winStart+L))
+              .sort((a,b)=>a.b.mid-b.b.mid);
+}
+function paintTrains(){
+  const box=$("trains"), vis=visibleTrains();
+  $("tcount").textContent = vis.length ? "("+vis.length+")" : "";
+  if(!vis.length){ box.innerHTML='<p class="empty">No scheduled train reaches the crossing in the next 90 minutes. Only freight could close the gate.</p>'; return; }
+  const X=m=>Math.max(-4,Math.min(104,(m-winStart)/(L-1)*100));
+  box.innerHTML = vis.map(({c,b})=>{
+    const liveOn = c.live!=null;
+    const badge = liveOn ? (Math.round(c.live)===0 ? '<span class="badge on">on time</span>'
+                                                   : '<span class="badge on">live +'+Math.round(c.live)+'</span>')
+                : c.t.avg!=null ? '<span class="badge">avg +'+Math.round(c.t.avg)+'</span>'
+                : '<span class="badge">no history</span>';
+    const x0=X(b.lo), x1=X(b.hi), xm=X(b.mid);
+    return '<div class="trow">'+
+      '<div class="tmain"><span class="tno">'+c.t.no+'</span>'+
+        '<span class="tnm">'+c.t.nm+'</span>'+
+        '<span class="tdir">'+(c.t.dir==="down"?"&darr; to Viramgam":"&uarr; to Ahmedabad")+'</span>'+badge+'</div>'+
+      '<div class="ttime"><span>sched '+hhmm(c.cm)+'</span><span class="arrow">&rarr;</span>'+
+        '<b>'+hhmm(b.mid)+'</b><span>at the crossing</span></div>'+
+      '<div class="track">'+
+        '<span class="nowline" style="left:'+X(winStart).toFixed(2)+'%"></span>'+
+        '<span class="band'+(liveOn?"":" soft")+'" style="left:'+x0.toFixed(2)+'%;width:'+Math.max(0.6,x1-x0).toFixed(2)+'%"></span>'+
+        '<span class="med" style="left:'+xm.toFixed(2)+'%"></span>'+
+      '</div></div>';
+  }).join("");
+}
+
+function paintSource(fresh){
+  const pip=$("srcPip"), txt=$("srcTxt"), tog=$("liveToggle");
+  pip.classList.remove("live");
+  if(!liveDoc){
+    tog.disabled=true; tog.checked=false;
+    txt.textContent = dbState==="pending" ? "Checking for live delays…"
+                    : dbState==="none"    ? "Running on 7-day averages — live delays can't load here."
+                                          : "No live delays synced yet — running on 7-day averages.";
+    return;
+  }
+  tog.disabled=false; tog.checked=useLive;
+  const mins=Math.round((Date.now()-Date.parse(liveDoc.fetched_at))/60000);
+  const age = mins<1 ? "just now" : mins<60 ? mins+" min ago" : (mins/60).toFixed(1)+" h ago";
+  if(!useLive){ txt.textContent="Live delays switched off — using 7-day averages."; return; }
+  if(!fresh){ txt.textContent="Last sync "+age+" — too old to trust, using averages."; return; }
+  const vis=visibleTrains(), n=vis.filter(x=>x.c.live!=null).length;
+  pip.classList.add("live");
+  txt.textContent = vis.length ? n+" of "+vis.length+" trains on screen running live · synced "+age
+                               : "Live delays synced "+age;
+}
+
+/* ══ interaction ══════════════════════════════════════════════════════════ */
+/* Hovering previews a minute; pressing pins it. A pin is held as an absolute
+   time so the clock ticking past doesn't silently retarget it. */
+const plot=$("plot"), tip=$("tip");
+let dragging=false;
+function setSel(i, pin){
+  sel=Math.max(0,Math.min(L-1,i|0));
+  if(pin===true)  pinnedAbs = sel===0 ? null : winStart+sel;
+  if(pin===false) pinnedAbs = null;
+  if(series.length){ paintAspect(); paintChart(); }
+}
+function fromX(e){
+  const r=plot.getBoundingClientRect();
+  return Math.round((e.clientX-r.left)/r.width*(L-1));
+}
+plot.addEventListener("pointerdown",e=>{
+  dragging=true; plot.setPointerCapture(e.pointerId);
+  tip.classList.add("on"); setSel(fromX(e),true);
+});
+plot.addEventListener("pointermove",e=>{
+  if(dragging){ setSel(fromX(e),true); }
+  else if(e.pointerType==="mouse"){ tip.classList.add("on"); setSel(fromX(e)); }
+});
+plot.addEventListener("pointerup",e=>{
+  dragging=false;
+  if(e.pointerType!=="mouse") setTimeout(()=>tip.classList.remove("on"),1400);
+});
+plot.addEventListener("pointercancel",()=>{ dragging=false; tip.classList.remove("on"); });
+plot.addEventListener("pointerleave",()=>{
+  if(dragging) return;
+  tip.classList.remove("on");
+  if(pinnedAbs===null) setSel(0,false); else setSel(pinnedAbs-winStart);
+});
+plot.addEventListener("keydown",e=>{
+  const step=e.shiftKey?10:1;
+  if(e.key==="ArrowRight"){ setSel(sel+step,true); e.preventDefault(); }
+  else if(e.key==="ArrowLeft"){ setSel(sel-step,true); e.preventDefault(); }
+  else if(e.key==="Home"||e.key==="Escape"){ setSel(0,false); e.preventDefault(); }
+});
+$("backNow").addEventListener("click",()=>{ setSel(0,false); plot.focus(); });
+$("liveToggle").addEventListener("change",e=>{ useLive=e.target.checked; recompute(); });
+let rt; window.addEventListener("resize",()=>{
+  clearTimeout(rt); rt=setTimeout(()=>{ if(plot.clientWidth!==plotW) paintChart(); },120);
+});
+
+/* ══ boot ═════════════════════════════════════════════════════════════════ */
+$("genstamp").textContent="Timetable compiled "+DATA.generated.slice(0,10)+" · 110 trains · "+REPS.toLocaleString()+" replays per update";
+requestAnimationFrame(()=>setTimeout(()=>{
+  recompute();
+  setInterval(()=>{ if(istNow().min!==now.min) recompute(); else paintClock(); },15000);
+},30));
+
+/* live delays, if this view can reach the store — the page is complete without it */
+(async()=>{
+  const use = (window.claude && window.claude.use) ? window.claude.use.bind(window.claude) : null;
+  if(!use){ dbState="none"; paintSource(false); return; }
+  const db = await use("db");
+  if(!db){ dbState="none"; paintSource(false); return; }
+  dbRef=db; dbState="ok";
+  db.doc("live/latest").onSnapshot(snap=>{
+    liveDoc = snap.exists ? snap.data() : null;
+    if(series.length) recompute(); else paintSource(false);
+  }, ()=>{ dbState="none"; liveDoc=null; paintSource(false); });
+
+  const user = await use("user");
+  const may = user ? await user.can("data.write") : null;
+  if(may!==false) $("openSync").hidden=false;   // null = not told; keep it and let a write decide
+})();
+
+$("openSync").addEventListener("click",()=>{ $("sheet").classList.add("on"); $("syncBox").focus(); });
+$("cancelSync").addEventListener("click",()=>$("sheet").classList.remove("on"));
+$("sheet").addEventListener("click",e=>{ if(e.target===$("sheet")) $("sheet").classList.remove("on"); });
+$("doSync").addEventListener("click",async()=>{
+  const st=$("syncStatus"), btn=$("doSync");
+  let payload;
+  try{
+    payload=JSON.parse($("syncBox").value);
+    if(!payload || typeof payload.delays!=="object" || !payload.fetched_at) throw 0;
+  }catch(err){ st.textContent="That isn't the JSON from web_data.py — it needs fetched_at and delays."; return; }
+  btn.disabled=true; st.textContent="Saving…";
+  try{
+    await dbRef.doc("live/latest").set(payload);
+    st.textContent="Saved. Everyone sees it now.";
+    setTimeout(()=>{ $("sheet").classList.remove("on"); st.textContent=""; },900);
+  }catch(err){
+    st.textContent = err && err.code==="invalid_argument"
+      ? "You don't have permission to change this page's data."
+      : "Couldn't save — try again in a moment.";
+  }
+  btn.disabled=false;
+});
+</script>

@@ -1,0 +1,62 @@
+#  Keeps site/live.json fresh for free.
+#
+#  Runs every 15 minutes on GitHub's runners (unlimited minutes on a public repo),
+#  scrapes the current delay of every train due at the crossing in the next 4 hours,
+#  and commits the result only when something actually changed.
+#
+#  Note: GitHub disables scheduled workflows on a repo with no activity for 60 days,
+#  and cron runs are best-effort — a 15-minute schedule often lands every 20-30.
+#  The page states how old its data is, so a late run degrades honestly.
+
+name: Refresh live delays
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:        # the "Run workflow" button, for an on-demand refresh
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-live
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install --quiet -r requirements.txt
+
+      - name: Fetch live delays
+        run: python web_data.py --live --hours 4 > site/live.json
+
+      - name: Check it is valid
+        run: |
+          python - <<'PY'
+          import json, sys
+          d = json.load(open("site/live.json"))
+          assert d.get("fetched_at") and isinstance(d.get("delays"), dict), "malformed payload"
+          live = sum(1 for v in d["delays"].values() if v.get("delay") is not None)
+          print(f"{live} of {len(d['delays'])} trains reported a live delay")
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- site/live.json; then
+            echo "no change"
+          else
+            git add site/live.json
+            git commit -m "live delays $(date -u +'%Y-%m-%d %H:%M UTC') [skip ci]"
+            git push
+          fi
