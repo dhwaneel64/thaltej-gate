@@ -39,15 +39,14 @@ jobs:
       - name: Fetch live delays
         run: python web_data.py --live --hours 4 > site/live.json
 
+      # No heredoc here on purpose: inside `run: |` the terminator would be
+      # indented, and bash only accepts it at the start of the line.
       - name: Check it is valid
-        run: |
-          python - <<'PY'
-          import json, sys
-          d = json.load(open("site/live.json"))
-          assert d.get("fetched_at") and isinstance(d.get("delays"), dict), "malformed payload"
-          live = sum(1 for v in d["delays"].values() if v.get("delay") is not None)
-          print(f"{live} of {len(d['delays'])} trains reported a live delay")
-          PY
+        run: >-
+          python -c "import json; d=json.load(open('site/live.json'));
+          assert d.get('fetched_at') and isinstance(d.get('delays'), dict), 'malformed payload';
+          print(sum(1 for v in d['delays'].values() if v.get('delay') is not None), 'of',
+          len(d['delays']), 'trains reported a live delay')"
 
       - name: Commit if changed
         run: |
