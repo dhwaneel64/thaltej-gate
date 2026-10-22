@@ -370,7 +370,7 @@ def run_live(by_day, pool, p, arrive, weekday=None, reps=2000,
              before=LIVE_BEFORE, after=LIVE_AFTER, live_base_sd=LIVE_SD_BASE,
              timeout=LIVE_TIMEOUT, pause=LIVE_PAUSE, max_age=LIVE_MAX_AGE_MIN):
     """Today's odds at `arrive`, with live delays for the trains due around then."""
-    today = dt.date.today()
+    today = dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).date()
     weekday = weekday or DAYS[today.weekday()]
     window = nearby_trains(by_day, weekday, arrive, before=before, after=after)
 

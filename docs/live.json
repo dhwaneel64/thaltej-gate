@@ -1,27 +1,59 @@
 {
- "fetched_at": "2026-10-22T11:40:06+00:00",
+ "fetched_at": "2026-10-22T17:13:56+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20967": {
+  "11463": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 13,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94801": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 17:30"
   },
-  "16333": {
-   "delay": 0.0,
-   "at": "BJW",
+  "22959": {
+   "delay": 2.0,
+   "at": "BJD",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "69185": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:05"
+  },
+  "19218": {
+   "delay": 1.0,
+   "at": "CJR",
    "age": 0,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""
   },
-  "19120": {
+  "22946": {
    "delay": 0.0,
-   "at": "GNC",
-   "age": 83,
+   "at": "VD",
+   "age": -1,
+   "run_date": "2026-10-22",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19015": {
+   "delay": 2.0,
+   "at": "LKD",
+   "age": 0,
    "run_date": "2026-10-22",
    "source": "railyatri",
    "note": ""

@@ -16,6 +16,8 @@ import pandas as pd
 
 import crossing_sim as cs
 
+IST = dt.timezone(dt.timedelta(hours=5, minutes=30))   # the crossing's clock
+
 
 def schedule_json(path="trains.csv"):
     df, pool, _ = cs.load(path)
@@ -45,14 +47,16 @@ def schedule_json(path="trains.csv"):
 def live_json(hours=3.0, path="trains.csv", pause=cs.LIVE_PAUSE, timeout=cs.LIVE_TIMEOUT):
     """Live delays for every train due at the crossing within the next `hours`."""
     _, _, by_day = cs.load(path)
-    now = dt.datetime.now()
+    # Always IST: this also runs on GitHub's runners, which are on UTC, and a
+    # 5.5-hour error picks an entirely different set of trains.
+    now = dt.datetime.now(IST)
     weekday = cs.DAYS[now.weekday()]
     at = f"{now.hour:02d}:{now.minute:02d}"
     window = cs.nearby_trains(by_day, weekday, at, before=15, after=int(hours * 60))
     nos = list(dict.fromkeys(window["train_no"]))
     live = cs.fetch_live(nos, pause=pause, timeout=timeout, verbose=False)
     return dict(
-        fetched_at=now.astimezone().isoformat(timespec="seconds"),
+        fetched_at=now.isoformat(timespec="seconds"),
         horizon_hours=hours,
         delays={no: dict(delay=r["delay_min"], at=r.get("at"), age=r.get("age_min"),
                          run_date=r.get("run_date"), source=r["source"], note=r["note"])

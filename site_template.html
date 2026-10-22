@@ -658,8 +658,11 @@ function paintAspect(){
   let txt="nothing — the line is clear";
   if(s.p>0.02 && s.cause>=0){
     if(s.cause>=cand.length) txt='freight, most likely <span style="color:var(--muted)">(modelled, not timetabled)</span>';
-    else { const c=cand[s.cause];
-      txt="<b>"+c.t.no+"</b> "+c.t.nm+(s.causeShare<0.45?' <span style="color:var(--muted)">or another</span>':""); }
+    else {
+      const c=cand[s.cause], bb=(bands[s.cause]||{}).b;
+      txt="<b>"+c.t.no+"</b> "+c.t.nm+
+          (bb?' <span style="color:var(--muted)">· due ~'+hhmm(bb.mid)+'</span>':"")+
+          (s.causeShare<0.45?' <span style="color:var(--muted)">or another</span>':""); }
   }
   const ct=$("causeTxt");
   if(ct.dataset.v!==txt){ ct.dataset.v=txt; ct.innerHTML='<span class="swap">'+txt+'</span>'; }
@@ -820,9 +823,10 @@ function paintSource(fresh){
   const age = mins<1?"just now":mins<60?mins+" min ago":(mins/60).toFixed(1)+" h ago";
   if(!fresh){ txt.textContent="Last live sync "+age+" — too old to trust, using averages."; return; }
   const vis=visibleTrains(), n=vis.filter(x=>x.c.live!=null).length;
-  pip.classList.add("live");
-  txt.textContent = vis.length ? n+" of "+vis.length+" trains on screen running live · "+age
-                               : "Live delays · "+age;
+  if(n>0) pip.classList.add("live");
+  txt.textContent = !vis.length      ? "Live feed "+age+" · no trains due"
+                  : n===0            ? "None of these "+vis.length+" trains is reporting yet · feed "+age
+                                     : n+" of "+vis.length+" trains on screen running live · "+age;
 }
 async function pullLive(){
   try{
