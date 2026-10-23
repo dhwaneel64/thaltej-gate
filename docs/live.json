@@ -1,16 +1,8 @@
 {
- "fetched_at": "2026-10-23T07:14:28+05:30",
+ "fetched_at": "2026-10-23T12:03:17+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "16338": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 20:25"
-  },
-  "11088": {
+  "12474": {
    "delay": null,
    "at": null,
    "age": null,
@@ -18,7 +10,7 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "22923": {
+  "12755": {
    "delay": null,
    "at": null,
    "age": null,
@@ -26,7 +18,15 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "69186": {
+  "15668": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "16335": {
    "delay": null,
    "at": null,
    "age": null,
@@ -34,39 +34,7 @@
    "source": null,
    "note": "no live data"
   },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19568": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22960": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "94802": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19119": {
+  "19120": {
    "delay": null,
    "at": null,
    "age": null,
