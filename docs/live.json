@@ -1,8 +1,32 @@
 {
- "fetched_at": "2026-10-23T12:03:17+05:30",
+ "fetched_at": "2026-10-23T17:38:27+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "12474": {
+  "11463": {
+   "delay": 4.0,
+   "at": "VG",
+   "age": 25,
+   "run_date": "2026-10-23",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94801": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Awaiting Update"
+  },
+  "22959": {
+   "delay": 0.0,
+   "at": "ADI",
+   "age": 12,
+   "run_date": "2026-10-23",
+   "source": "railyatri",
+   "note": ""
+  },
+  "15045": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,23 +34,15 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "12755": {
+  "69185": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 20:05"
   },
-  "15668": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "16335": {
+  "19218": {
    "delay": null,
    "at": null,
    "age": null,
@@ -34,13 +50,29 @@
    "source": null,
    "note": "no live data"
   },
-  "19120": {
+  "22946": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
    "note": "no live data"
+  },
+  "15635": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19015": {
+   "delay": 28.0,
+   "at": "PLJ",
+   "age": 11,
+   "run_date": "2026-10-23",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
