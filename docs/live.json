@@ -1,79 +1,7 @@
 {
- "fetched_at": "2026-10-23T22:36:34+05:30",
+ "fetched_at": "2026-10-24T01:57:09+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22926": {
-   "delay": 6.0,
-   "at": "WSE",
-   "age": 2,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19217": {
-   "delay": 0.0,
-   "at": "ADI",
-   "age": 23,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
-  "12972": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22951": {
-   "delay": 0.0,
-   "at": "KKF",
-   "age": 2,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
-  "20907": {
-   "delay": 10.0,
-   "at": "KBRV",
-   "age": 0,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22989": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "20803": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "22924": {
-   "delay": 37.0,
-   "at": "KHC",
-   "age": 1,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19256": {
-   "delay": 30.0,
-   "at": "ALMR",
-   "age": 4,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
-  },
   "19559": {
    "delay": null,
    "at": null,
@@ -83,20 +11,76 @@
    "note": "Incorrect Start Day"
   },
   "22955": {
-   "delay": 18.0,
-   "at": "AKV",
-   "age": 4,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 17:45"
   },
   "22956": {
-   "delay": 28.0,
-   "at": "CHIB",
-   "age": 0,
-   "run_date": "2026-10-23",
-   "source": "railyatri",
-   "note": ""
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:25"
+  },
+  "12971": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12942": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19269": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20908": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22907": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22958": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22945": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
