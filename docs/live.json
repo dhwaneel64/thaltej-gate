@@ -1,35 +1,59 @@
 {
- "fetched_at": "2026-10-24T12:22:33+05:30",
+ "fetched_at": "2026-10-24T17:20:53+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "12473": {
-   "delay": 17.0,
-   "at": "DHG",
-   "age": 16,
+  "11465": {
+   "delay": 5.0,
+   "at": "VG",
+   "age": 10,
    "run_date": "2026-10-24",
    "source": "railyatri",
    "note": ""
   },
-  "16614": {
+  "22959": {
+   "delay": 0.0,
+   "at": "VY",
+   "age": 1,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "11087": {
+   "delay": 0.0,
+   "at": "BMM",
+   "age": 0,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19218": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "16337": {
-   "delay": 3.0,
-   "at": "VD",
-   "age": -1,
-   "run_date": "2026-10-24",
-   "source": "railyatri",
-   "note": ""
+  "22946": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "19120": {
+  "15667": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19015": {
    "delay": 10.0,
-   "at": "DL",
-   "age": 0,
+   "at": "PLJ",
+   "age": 16,
    "run_date": "2026-10-24",
    "source": "railyatri",
    "note": ""
