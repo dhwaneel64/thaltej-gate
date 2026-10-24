@@ -1,56 +1,64 @@
 {
- "fetched_at": "2026-10-24T20:54:21+05:30",
+ "fetched_at": "2026-10-24T23:48:17+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "15667": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19015": {
-   "delay": 7.0,
-   "at": "SBTF",
-   "age": 5,
-   "run_date": "2026-10-24",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22957": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:45"
-  },
-  "22926": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19217": {
-   "delay": 3.0,
-   "at": "ADD",
+  "20907": {
+   "delay": 19.0,
+   "at": "ADI",
    "age": 4,
    "run_date": "2026-10-24",
    "source": "railyatri",
    "note": ""
   },
-  "12972": {
-   "delay": 13.0,
-   "at": "CDA",
-   "age": 6,
+  "22990": {
+   "delay": 41.0,
+   "at": "SNEC",
+   "age": 0,
    "run_date": "2026-10-24",
    "source": "railyatri",
    "note": ""
   },
-  "20907": {
+  "19255": {
+   "delay": 19.0,
+   "at": "BJW",
+   "age": 0,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22955": {
+   "delay": 7.0,
+   "at": "BDA",
+   "age": -1,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22956": {
+   "delay": 19.0,
+   "at": "KHXB",
+   "age": 1,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12971": {
+   "delay": 4.0,
+   "at": "SNJL",
+   "age": -1,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22939": {
+   "delay": 71.0,
+   "at": "JALD",
+   "age": 0,
+   "run_date": "2026-10-24",
+   "source": "railyatri",
+   "note": ""
+  },
+  "14311": {
    "delay": null,
    "at": null,
    "age": null,
