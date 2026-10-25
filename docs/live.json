@@ -1,86 +1,78 @@
 {
- "fetched_at": "2026-10-25T23:54:38+05:30",
+ "fetched_at": "2026-10-26T02:34:28+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20907": {
-   "delay": 4.0,
-   "at": "ABD",
-   "age": -1,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22974": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "22924": {
-   "delay": 0.0,
-   "at": "BMM",
-   "age": 0,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
-  "16733": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "19256": {
-   "delay": 25.0,
-   "at": "SUNN",
-   "age": 2,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19255": {
-   "delay": 21.0,
-   "at": "KRCA",
-   "age": 0,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22955": {
-   "delay": 43.0,
-   "at": "KSPR",
-   "age": 0,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22956": {
-   "delay": 26.0,
-   "at": "KHXB",
-   "age": 0,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
-  },
   "12971": {
-   "delay": 13.0,
-   "at": "PAO",
-   "age": 1,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 19:10"
   },
   "20804": {
-   "delay": 11.0,
-   "at": "BCOB",
-   "age": 4,
-   "run_date": "2026-10-25",
-   "source": "railyatri",
-   "note": ""
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "20908": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 22:40"
+  },
+  "22958": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22945": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20686": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22925": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12906": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19016": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
