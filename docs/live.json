@@ -1,8 +1,72 @@
 {
- "fetched_at": "2026-10-26T12:21:51+05:30",
+ "fetched_at": "2026-10-26T19:23:36+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "12478": {
+  "19218": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22946": {
+   "delay": 5.0,
+   "at": "VCN",
+   "age": 1,
+   "run_date": "2026-10-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19015": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
+  },
+  "20935": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22926": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19217": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12972": {
+   "delay": 7.0,
+   "at": "SOJN",
+   "age": 14,
+   "run_date": "2026-10-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20909": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,21 +74,13 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "16337": {
-   "delay": 2.0,
-   "at": "VD",
-   "age": 0,
-   "run_date": "2026-10-26",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19120": {
-   "delay": 9.0,
-   "at": "DL",
-   "age": 0,
-   "run_date": "2026-10-26",
-   "source": "railyatri",
-   "note": ""
+  "20938": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
