@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-26T06:58:56+05:30",
+ "fetched_at": "2026-10-26T12:21:51+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "15046": {
+  "12478": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,61 +10,21 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "69186": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Awaiting Update"
+  "16337": {
+   "delay": 2.0,
+   "at": "VD",
+   "age": 0,
+   "run_date": "2026-10-26",
+   "source": "railyatri",
+   "note": ""
   },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "22717": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "20936": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22960": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "94802": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "19120": {
+   "delay": 9.0,
+   "at": "DL",
+   "age": 0,
+   "run_date": "2026-10-26",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
