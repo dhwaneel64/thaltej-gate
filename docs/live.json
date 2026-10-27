@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-10-27T04:53:37+05:30",
+ "fetched_at": "2026-10-27T07:47:57+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "19270": {
+  "11092": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,53 +10,13 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:50"
-  },
-  "22945": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:05"
-  },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19560": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "11092": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
   "22923": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
   },
   "69186": {
    "delay": null,
@@ -64,7 +24,7 @@
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Awaiting Update"
   },
   "11466": {
    "delay": null,
@@ -75,6 +35,46 @@
    "note": "no live data"
   },
   "20968": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12950": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22960": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22940": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "94802": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
