@@ -1,54 +1,62 @@
 {
- "fetched_at": "2026-10-28T07:51:16+05:30",
+ "fetched_at": "2026-10-28T14:21:11+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "69186": {
+  "15636": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "19120": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 4,
+   "run_date": "2026-10-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12905": {
+   "delay": 16.0,
+   "at": "WKR",
+   "age": 5,
+   "run_date": "2026-10-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "11463": {
+   "delay": 3.0,
+   "at": "RJT",
+   "age": 12,
+   "run_date": "2026-10-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94801": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 17:30"
+  },
+  "22973": {
+   "delay": 6.0,
+   "at": "BMSB",
+   "age": 0,
+   "run_date": "2026-10-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22959": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
    "note": "Important Alert"
-  },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 14:00"
-  },
-  "22717": {
-   "delay": 0.0,
-   "at": "BMM",
-   "age": 0,
-   "run_date": "2026-10-28",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22960": {
-   "delay": 27.0,
-   "at": "RA",
-   "age": -1,
-   "run_date": "2026-10-28",
-   "source": "railyatri",
-   "note": ""
-  },
-  "94802": {
-   "delay": 25.0,
-   "at": "MALB",
-   "age": -1,
-   "run_date": "2026-10-28",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 10:20"
   }
  }
 }
