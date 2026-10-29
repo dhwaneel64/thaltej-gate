@@ -1,27 +1,59 @@
 {
- "fetched_at": "2026-10-29T11:45:04+05:30",
+ "fetched_at": "2026-10-29T18:44:11+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20967": {
+  "69185": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 20:05"
   },
-  "16333": {
+  "19218": {
    "delay": 0.0,
-   "at": "LXR",
+   "at": "JKA",
    "age": 0,
    "run_date": "2026-10-29",
    "source": "railyatri",
    "note": ""
   },
-  "19120": {
+  "22946": {
    "delay": 9.0,
-   "at": "KHC",
+   "at": "BMM",
    "age": 0,
+   "run_date": "2026-10-29",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19015": {
+   "delay": 8.0,
+   "at": "VXD",
+   "age": 1,
+   "run_date": "2026-10-29",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
+  },
+  "22969": {
+   "delay": 84.0,
+   "at": "PPLI",
+   "age": 29,
+   "run_date": "2026-10-29",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 13.0,
+   "at": "LKBL",
+   "age": 1,
    "run_date": "2026-10-29",
    "source": "railyatri",
    "note": ""
