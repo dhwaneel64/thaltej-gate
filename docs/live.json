@@ -1,8 +1,32 @@
 {
- "fetched_at": "2026-10-30T21:26:44+05:30",
+ "fetched_at": "2026-10-31T02:00:32+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "14312": {
+  "22955": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 17:45"
+  },
+  "22956": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:25"
+  },
+  "12971": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 19:10"
+  },
+  "12942": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,39 +34,7 @@
    "source": null,
    "note": "no live data"
   },
-  "22957": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:45"
-  },
-  "22926": {
-   "delay": 124.0,
-   "at": "WTJ",
-   "age": 0,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19217": {
-   "delay": 3.0,
-   "at": "GTE",
-   "age": 4,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
-  },
-  "12972": {
-   "delay": 21.0,
-   "at": "LM",
-   "age": 27,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22951": {
+  "19269": {
    "delay": null,
    "at": null,
    "age": null,
@@ -50,37 +42,37 @@
    "source": null,
    "note": "no live data"
   },
-  "20907": {
-   "delay": 30.0,
-   "at": "LKD",
-   "age": 1,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22989": {
-   "delay": 5.0,
-   "at": "CVJ",
-   "age": 0,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
-  },
-  "20803": {
+  "20908": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "22924": {
-   "delay": 63.0,
-   "at": "JAM",
-   "age": 4,
-   "run_date": "2026-10-30",
-   "source": "railyatri",
-   "note": ""
+  "22907": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22958": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22945": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
