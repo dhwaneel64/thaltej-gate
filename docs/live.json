@@ -1,32 +1,8 @@
 {
- "fetched_at": "2026-10-31T05:36:22+05:30",
+ "fetched_at": "2026-10-31T11:10:04+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22945": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:05"
-  },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 06:15"
-  },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 22:40"
-  },
-  "69186": {
+  "12473": {
    "delay": null,
    "at": null,
    "age": null,
@@ -34,21 +10,29 @@
    "source": null,
    "note": "no live data"
   },
-  "11466": {
+  "16614": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
   },
-  "12756": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "16337": {
+   "delay": 59.0,
+   "at": "JALD",
+   "age": 0,
+   "run_date": "2026-10-31",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19120": {
+   "delay": 4.0,
+   "at": "BKNG",
+   "age": 1,
+   "run_date": "2026-10-31",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
