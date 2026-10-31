@@ -1,43 +1,51 @@
 {
- "fetched_at": "2026-10-31T16:44:47+05:30",
+ "fetched_at": "2026-10-31T21:39:19+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "11465": {
-   "delay": 0.0,
-   "at": "SR",
-   "age": -1,
-   "run_date": "2026-10-31",
-   "source": "railyatri",
-   "note": ""
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
   },
-  "22959": {
-   "delay": 10.0,
-   "at": "ND",
-   "age": -1,
-   "run_date": "2026-10-31",
-   "source": "railyatri",
-   "note": ""
-  },
-  "11087": {
-   "delay": 0.0,
-   "at": "CJR",
+  "22926": {
+   "delay": 96.0,
+   "at": "KHC",
    "age": 1,
    "run_date": "2026-10-31",
    "source": "railyatri",
    "note": ""
   },
-  "19218": {
-   "delay": 13.0,
-   "at": "THAN",
-   "age": 2,
+  "19217": {
+   "delay": 1.0,
+   "at": "BJD",
+   "age": 0,
    "run_date": "2026-10-31",
    "source": "railyatri",
    "note": ""
   },
-  "22946": {
-   "delay": 40.0,
-   "at": "KHC",
+  "12972": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20907": {
+   "delay": 20.0,
+   "at": "VRM",
    "age": 0,
+   "run_date": "2026-10-31",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22990": {
+   "delay": 20.0,
+   "at": "DAS",
+   "age": 2,
    "run_date": "2026-10-31",
    "source": "railyatri",
    "note": ""
