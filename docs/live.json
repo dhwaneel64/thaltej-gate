@@ -1,40 +1,32 @@
 {
- "fetched_at": "2026-11-01T21:54:30+05:30",
+ "fetched_at": "2026-11-02T02:12:03+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22957": {
-   "delay": 0.0,
-   "at": "GNC",
-   "age": 9,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
+  "22956": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:25"
   },
-  "22964": {
-   "delay": 0.0,
-   "at": "VG",
-   "age": 9,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
+  "12971": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 19:10"
   },
-  "22926": {
-   "delay": 92.0,
-   "at": "WKRC",
-   "age": 4,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
+  "20804": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
   },
-  "19217": {
-   "delay": 9.0,
-   "at": "GER",
-   "age": 1,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
-  },
-  "12972": {
+  "20908": {
    "delay": null,
    "at": null,
    "age": null,
@@ -42,69 +34,29 @@
    "source": null,
    "note": "no live data"
   },
-  "22970": {
+  "22958": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "20907": {
-   "delay": 18.0,
-   "at": "VS",
-   "age": 9,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22974": {
+  "22945": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "22924": {
-   "delay": 14.0,
-   "at": "KHDI",
-   "age": 4,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
-  },
-  "16733": {
+  "20686": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "19256": {
-   "delay": 0.0,
-   "at": "DLJ",
-   "age": 11,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19255": {
-   "delay": 13.0,
-   "at": "KDSD",
-   "age": 1,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22955": {
-   "delay": 9.0,
-   "at": "ST",
-   "age": 9,
-   "run_date": "2026-11-01",
-   "source": "railyatri",
-   "note": ""
+   "note": "no live data"
   }
  }
 }
