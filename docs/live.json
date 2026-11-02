@@ -1,38 +1,46 @@
 {
- "fetched_at": "2026-11-02T09:59:27+05:30",
+ "fetched_at": "2026-11-02T18:18:42+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22960": {
-   "delay": 9.0,
-   "at": "VCN",
-   "age": 13,
-   "run_date": "2026-11-02",
-   "source": "railyatri",
-   "note": ""
+  "69185": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:05"
   },
-  "94802": {
-   "delay": 9.0,
-   "at": "CE",
+  "19218": {
+   "delay": 19.0,
+   "at": "LPR",
    "age": -1,
    "run_date": "2026-11-02",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
+  "22946": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 10:20"
+   "note": "no live data"
   },
-  "12478": {
+  "19015": {
+   "delay": 14.0,
+   "at": "VS",
+   "age": 14,
+   "run_date": "2026-11-02",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 21:45"
   }
  }
 }
