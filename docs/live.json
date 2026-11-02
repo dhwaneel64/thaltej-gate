@@ -1,78 +1,38 @@
 {
- "fetched_at": "2026-11-02T05:24:58+05:30",
+ "fetched_at": "2026-11-02T09:59:27+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22945": {
+  "22960": {
+   "delay": 9.0,
+   "at": "VCN",
+   "age": 13,
+   "run_date": "2026-11-02",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94802": {
+   "delay": 9.0,
+   "at": "CE",
+   "age": -1,
+   "run_date": "2026-11-02",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 21:05"
+   "note": "Train starts at 10:20"
   },
-  "20686": {
+  "12478": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
    "note": "Incorrect Start Day"
-  },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 06:15"
-  },
-  "12906": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "15046": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "69186": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22717": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
   }
  }
 }
