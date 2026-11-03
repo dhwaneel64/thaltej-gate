@@ -1,16 +1,16 @@
 {
- "fetched_at": "2026-11-03T03:39:24+05:30",
+ "fetched_at": "2026-11-03T08:58:10+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20908": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 22:40"
+  "20968": {
+   "delay": 52.0,
+   "at": "KHRS",
+   "age": 1,
+   "run_date": "2026-11-03",
+   "source": "railyatri",
+   "note": ""
   },
-  "19270": {
+  "12950": {
    "delay": null,
    "at": null,
    "age": null,
@@ -18,37 +18,45 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:50"
+  "22960": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 0,
+   "run_date": "2026-11-03",
+   "source": "railyatri",
+   "note": ""
   },
-  "22945": {
+  "22940": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
   },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "94802": {
+   "delay": 17.0,
+   "at": "VSV",
+   "age": 0,
+   "run_date": "2026-11-03",
+   "source": "railyatri",
+   "note": ""
   },
-  "19560": {
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Train starts at 10:20"
+  },
+  "12476": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
   }
  }
 }
