@@ -1,62 +1,78 @@
 {
- "fetched_at": "2026-11-03T08:58:10+05:30",
+ "fetched_at": "2026-11-03T16:45:33+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20968": {
-   "delay": 52.0,
-   "at": "KHRS",
-   "age": 1,
-   "run_date": "2026-11-03",
-   "source": "railyatri",
-   "note": ""
-  },
-  "12950": {
+  "16734": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "22960": {
-   "delay": 0.0,
-   "at": "VGDC",
-   "age": 0,
-   "run_date": "2026-11-03",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22940": {
+  "11463": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "94802": {
-   "delay": 17.0,
-   "at": "VSV",
-   "age": 0,
-   "run_date": "2026-11-03",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19119": {
+  "94801": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 10:20"
+   "note": "Train starts at 17:30"
   },
-  "12476": {
+  "22959": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
+  },
+  "22938": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19567": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "69185": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19218": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22946": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
