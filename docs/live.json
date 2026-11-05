@@ -1,27 +1,75 @@
 {
- "fetched_at": "2026-11-05T11:16:30+05:30",
+ "fetched_at": "2026-11-05T19:30:02+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20967": {
+  "19218": {
+   "delay": 0.0,
+   "at": "CLDY",
+   "age": 0,
+   "run_date": "2026-11-05",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22946": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "no live data"
   },
-  "16333": {
-   "delay": 7.0,
-   "at": "KHC",
-   "age": -1,
+  "19015": {
+   "delay": 19.0,
+   "at": "GTE",
+   "age": 0,
    "run_date": "2026-11-05",
    "source": "railyatri",
    "note": ""
   },
-  "19120": {
-   "delay": 10.0,
-   "at": "BKNG",
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
+  },
+  "22969": {
+   "delay": 27.0,
+   "at": "RJT",
+   "age": 13,
+   "run_date": "2026-11-05",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 23.0,
+   "at": "WTJ",
    "age": 0,
+   "run_date": "2026-11-05",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 0.0,
+   "at": "LKD",
+   "age": 0,
+   "run_date": "2026-11-05",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 3.0,
+   "at": "SGD",
+   "age": 19,
+   "run_date": "2026-11-05",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20938": {
+   "delay": 0.0,
+   "at": "MXO",
+   "age": 1,
    "run_date": "2026-11-05",
    "source": "railyatri",
    "note": ""
