@@ -1,8 +1,56 @@
 {
- "fetched_at": "2026-11-08T13:31:31+05:30",
+ "fetched_at": "2026-11-08T20:41:32+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22718": {
+  "19015": {
+   "delay": 0.0,
+   "at": "SMYD",
+   "age": 0,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
+  },
+  "22964": {
+   "delay": 14.0,
+   "at": "SNEC",
+   "age": 1,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 18.0,
+   "at": "WKRC",
+   "age": 5,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 0.0,
+   "at": "VXD",
+   "age": -1,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 10.0,
+   "at": "CDA",
+   "age": -1,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22970": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,18 +58,10 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "19120": {
-   "delay": 0.0,
-   "at": "KXZ",
-   "age": -1,
-   "run_date": "2026-11-08",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22905": {
-   "delay": 0.0,
-   "at": "RJT",
-   "age": 5,
+  "20907": {
+   "delay": 28.0,
+   "at": "CCTA",
+   "age": 0,
    "run_date": "2026-11-08",
    "source": "railyatri",
    "note": ""
