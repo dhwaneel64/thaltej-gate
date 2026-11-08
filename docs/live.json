@@ -1,78 +1,70 @@
 {
- "fetched_at": "2026-11-08T03:59:19+05:30",
+ "fetched_at": "2026-11-08T07:15:17+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "14311": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "20937": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "20908": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 22:40"
-  },
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22945": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "12906": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
   "16338": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
+  },
+  "22923": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "69186": {
+   "delay": 0.0,
+   "at": "UJN",
+   "age": 91,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "11464": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 14:00"
+  },
+  "16613": {
+   "delay": 0.0,
+   "at": "BLRD",
+   "age": 1,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19107": {
+   "delay": 13.0,
+   "at": "WC",
+   "age": 19,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22960": {
+   "delay": 19.0,
+   "at": "SDD",
+   "age": 13,
+   "run_date": "2026-11-08",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19119": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 10:20"
   }
  }
 }
