@@ -1,70 +1,14 @@
 {
- "fetched_at": "2026-11-09T04:40:49+05:30",
+ "fetched_at": "2026-11-09T08:09:40+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:50"
-  },
-  "22945": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:05"
-  },
-  "20686": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "12906": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19016": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "15046": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
   "69186": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Awaiting Update"
   },
   "11464": {
    "delay": null,
@@ -72,7 +16,47 @@
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
+  },
+  "22717": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": -1,
+   "run_date": "2026-11-09",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20936": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "22960": {
+   "delay": 15.0,
+   "at": "SUNR",
+   "age": 6,
+   "run_date": "2026-11-09",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94802": {
+   "delay": 31.0,
+   "at": "MALB",
+   "age": -1,
+   "run_date": "2026-11-09",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19119": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 10:20"
   }
  }
 }
