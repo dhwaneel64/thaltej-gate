@@ -1,54 +1,86 @@
 {
- "fetched_at": "2026-11-12T14:21:10+05:30",
+ "fetched_at": "2026-11-12T22:51:56+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "16333": {
-   "delay": 0.0,
-   "at": "JKA",
-   "age": 1,
-   "run_date": "2026-11-12",
-   "source": "railyatri",
-   "note": ""
+  "22926": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "19120": {
-   "delay": 0.0,
-   "at": "VG",
-   "age": 11,
-   "run_date": "2026-11-12",
-   "source": "railyatri",
-   "note": ""
+  "19217": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "12905": {
+  "12972": {
    "delay": 0.0,
-   "at": "LMC",
+   "at": "WSE",
    "age": 0,
    "run_date": "2026-11-12",
    "source": "railyatri",
    "note": ""
   },
-  "11463": {
-   "delay": 2.0,
-   "at": "RJT",
-   "age": 12,
+  "20938": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20907": {
+   "delay": 7.0,
+   "at": "GTE",
+   "age": 0,
    "run_date": "2026-11-12",
    "source": "railyatri",
    "note": ""
   },
-  "94801": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 17:30"
+  "22990": {
+   "delay": 21.0,
+   "at": "BTD",
+   "age": 3,
+   "run_date": "2026-11-12",
+   "source": "railyatri",
+   "note": ""
   },
-  "22959": {
+  "19255": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 15:50"
+   "note": "no live data"
+  },
+  "22955": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22956": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20910": {
+   "delay": 0.0,
+   "at": "RJT",
+   "age": 4,
+   "run_date": "2026-11-12",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
