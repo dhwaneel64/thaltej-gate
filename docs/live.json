@@ -1,78 +1,54 @@
 {
- "fetched_at": "2026-11-13T23:56:41+05:30",
+ "fetched_at": "2026-11-14T05:17:27+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20907": {
-   "delay": 2.0,
-   "at": "ABD",
-   "age": 3,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22989": {
-   "delay": 0.0,
-   "at": "VTA",
-   "age": 0,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
-  },
-  "20803": {
+  "22945": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 21:05"
   },
-  "22924": {
-   "delay": 23.0,
-   "at": "CJR",
-   "age": 14,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19256": {
-   "delay": 35.0,
-   "at": "WC",
-   "age": 0,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19559": {
+  "22925": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 06:15"
   },
-  "22955": {
-   "delay": 0.0,
-   "at": "VDA",
-   "age": 1,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
+  "19016": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 22:40"
   },
-  "22956": {
-   "delay": 12.0,
-   "at": "DHNL",
-   "age": 1,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
+  "69186": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   },
-  "12971": {
-   "delay": 2.0,
-   "at": "BH",
-   "age": 0,
-   "run_date": "2026-11-13",
-   "source": "railyatri",
-   "note": ""
+  "11466": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12756": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
