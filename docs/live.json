@@ -1,8 +1,8 @@
 {
- "fetched_at": "2026-11-15T07:12:58+05:30",
+ "fetched_at": "2026-11-15T13:58:20+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "16338": {
+  "22718": {
    "delay": null,
    "at": null,
    "age": null,
@@ -10,15 +10,23 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "22923": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "19120": {
+   "delay": 0.0,
+   "at": "VNRD",
+   "age": 0,
+   "run_date": "2026-11-15",
+   "source": "railyatri",
+   "note": ""
   },
-  "69186": {
+  "22905": {
+   "delay": 3.0,
+   "at": "AXA",
+   "age": 1,
+   "run_date": "2026-11-15",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22937": {
    "delay": null,
    "at": null,
    "age": null,
@@ -26,45 +34,21 @@
    "source": null,
    "note": "Awaiting Update"
   },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "11463": {
+   "delay": 0.0,
+   "at": "BKNG",
+   "age": 15,
+   "run_date": "2026-11-15",
+   "source": "railyatri",
+   "note": ""
   },
-  "16613": {
+  "94801": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
-  },
-  "19107": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22960": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+   "note": "Train starts at 17:30"
   }
  }
 }
