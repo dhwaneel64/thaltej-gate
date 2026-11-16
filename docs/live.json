@@ -1,19 +1,99 @@
 {
- "fetched_at": "2026-11-16T13:09:30+05:30",
+ "fetched_at": "2026-11-16T22:57:56+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "16337": {
+  "22926": {
+   "delay": 15.0,
+   "at": "GGM",
+   "age": 5,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
    "delay": 0.0,
-   "at": "BLRD",
+   "at": "SAU",
    "age": 0,
    "run_date": "2026-11-16",
    "source": "railyatri",
    "note": ""
   },
-  "19120": {
-   "delay": 8.0,
-   "at": "CJR",
-   "age": -1,
+  "12972": {
+   "delay": 11.0,
+   "at": "CE",
+   "age": 0,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20909": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "20938": {
+   "delay": 0.0,
+   "at": "SBTF",
+   "age": 1,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20907": {
+   "delay": 0.0,
+   "at": "KANJ",
+   "age": 0,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22963": {
+   "delay": 0.0,
+   "at": "ANND",
+   "age": 7,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20819": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
+  },
+  "19256": {
+   "delay": 41.0,
+   "at": "LTD",
+   "age": 0,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19255": {
+   "delay": 16.0,
+   "at": "SYN",
+   "age": 38,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22955": {
+   "delay": 15.0,
+   "at": "NIU",
+   "age": 1,
+   "run_date": "2026-11-16",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22956": {
+   "delay": 56.0,
+   "at": "BMSB",
+   "age": 0,
    "run_date": "2026-11-16",
    "source": "railyatri",
    "note": ""
