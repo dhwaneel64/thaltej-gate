@@ -1,94 +1,54 @@
 {
- "fetched_at": "2026-11-17T06:29:20+05:30",
+ "fetched_at": "2026-11-17T14:30:12+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "19016": {
+  "19120": {
+   "delay": 5.0,
+   "at": "VG",
+   "age": 4,
+   "run_date": "2026-11-17",
+   "source": "railyatri",
+   "note": ""
+  },
+  "16734": {
+   "delay": 0.0,
+   "at": "VD",
+   "age": 2,
+   "run_date": "2026-11-17",
+   "source": "railyatri",
+   "note": ""
+  },
+  "11463": {
+   "delay": 7.0,
+   "at": "KHC",
+   "age": 1,
+   "run_date": "2026-11-17",
+   "source": "railyatri",
+   "note": ""
+  },
+  "94801": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 22:40"
+   "note": "Train starts at 17:30"
   },
-  "19560": {
+  "22959": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 15:50"
+  },
+  "22938": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
    "note": "Incorrect Start Day"
-  },
-  "11092": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "22923": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "69186": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "11466": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "20968": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "12950": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22960": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22940": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "94802": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
   }
  }
 }
