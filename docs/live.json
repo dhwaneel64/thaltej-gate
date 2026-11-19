@@ -1,38 +1,78 @@
 {
- "fetched_at": "2026-11-19T10:00:48+05:30",
+ "fetched_at": "2026-11-19T19:25:40+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22960": {
-   "delay": 0.0,
-   "at": "ABD",
-   "age": 11,
-   "run_date": "2026-11-19",
-   "source": "railyatri",
-   "note": ""
-  },
-  "94802": {
-   "delay": 20.0,
-   "at": "VCN",
+  "19218": {
+   "delay": 16.0,
+   "at": "SAU",
    "age": -1,
    "run_date": "2026-11-19",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 10:20"
+  "22946": {
+   "delay": 1.0,
+   "at": "CE",
+   "age": -1,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
   },
-  "20967": {
+  "19015": {
+   "delay": 6.0,
+   "at": "GTE",
+   "age": 6,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 21:45"
+  },
+  "22969": {
+   "delay": 20.0,
+   "at": "RJT",
+   "age": 0,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 14.0,
+   "at": "JALD",
+   "age": 0,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 3.0,
+   "at": "VRE",
+   "age": 1,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 1.0,
+   "at": "SOA",
+   "age": 5,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20938": {
+   "delay": 0.0,
+   "at": "KWI",
+   "age": 0,
+   "run_date": "2026-11-19",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
