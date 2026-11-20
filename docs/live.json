@@ -1,40 +1,8 @@
 {
- "fetched_at": "2026-11-20T16:28:58+05:30",
+ "fetched_at": "2026-11-21T00:32:11+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "12949": {
-   "delay": 2.0,
-   "at": "JKA",
-   "age": 1,
-   "run_date": "2026-11-20",
-   "source": "railyatri",
-   "note": ""
-  },
-  "11463": {
-   "delay": 0.0,
-   "at": "LPR",
-   "age": 2,
-   "run_date": "2026-11-20",
-   "source": "railyatri",
-   "note": ""
-  },
-  "94801": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 17:30"
-  },
-  "22959": {
-   "delay": 13.0,
-   "at": "ANND",
-   "age": 5,
-   "run_date": "2026-11-20",
-   "source": "railyatri",
-   "note": ""
-  },
-  "15045": {
+  "22989": {
    "delay": null,
    "at": null,
    "age": null,
@@ -42,29 +10,93 @@
    "source": null,
    "note": "Incorrect Start Day"
   },
-  "69185": {
+  "20803": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 20:05"
+   "note": "Incorrect Start Day"
   },
-  "19218": {
-   "delay": 7.0,
-   "at": "DL",
-   "age": 2,
-   "run_date": "2026-11-20",
-   "source": "railyatri",
-   "note": ""
+  "22924": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Incorrect Start Day"
   },
-  "22946": {
-   "delay": 14.0,
-   "at": "RJT",
-   "age": 23,
-   "run_date": "2026-11-20",
-   "source": "railyatri",
-   "note": ""
+  "19256": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19559": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22955": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22956": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12971": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "12942": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "19269": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "20908": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
+  },
+  "22907": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
