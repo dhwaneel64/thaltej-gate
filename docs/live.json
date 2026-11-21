@@ -1,35 +1,51 @@
 {
- "fetched_at": "2026-11-21T13:29:03+05:30",
+ "fetched_at": "2026-11-21T21:34:08+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "12473": {
-   "delay": 2.0,
-   "at": "CE",
-   "age": 1,
-   "run_date": "2026-11-21",
-   "source": "railyatri",
-   "note": ""
-  },
-  "16614": {
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 21:45"
   },
-  "16337": {
-   "delay": 2.0,
-   "at": "KXZ",
-   "age": 0,
+  "22926": {
+   "delay": 0.0,
+   "at": "BLRD",
+   "age": 14,
    "run_date": "2026-11-21",
    "source": "railyatri",
    "note": ""
   },
-  "19120": {
+  "19217": {
    "delay": 14.0,
-   "at": "SUNR",
-   "age": 8,
+   "at": "GTE",
+   "age": 2,
+   "run_date": "2026-11-21",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 20.0,
+   "at": "SNEC",
+   "age": 2,
+   "run_date": "2026-11-21",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20907": {
+   "delay": 5.0,
+   "at": "MPR",
+   "age": 6,
+   "run_date": "2026-11-21",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22990": {
+   "delay": 0.0,
+   "at": "JA",
+   "age": 1,
    "run_date": "2026-11-21",
    "source": "railyatri",
    "note": ""
