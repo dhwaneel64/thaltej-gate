@@ -1,70 +1,54 @@
 {
- "fetched_at": "2026-11-22T07:05:28+05:30",
+ "fetched_at": "2026-11-22T14:21:10+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "16338": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "19120": {
+   "delay": 2.0,
+   "at": "VNRD",
+   "age": 4,
+   "run_date": "2026-11-22",
+   "source": "railyatri",
+   "note": ""
   },
-  "22923": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "22905": {
+   "delay": 0.0,
+   "at": "LMC",
+   "age": 0,
+   "run_date": "2026-11-22",
+   "source": "railyatri",
+   "note": ""
   },
-  "69186": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Awaiting Update"
+  "22937": {
+   "delay": 0.0,
+   "at": "SDD",
+   "age": 0,
+   "run_date": "2026-11-22",
+   "source": "railyatri",
+   "note": ""
   },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "11463": {
+   "delay": 0.0,
+   "at": "RJT",
+   "age": 11,
+   "run_date": "2026-11-22",
+   "source": "railyatri",
+   "note": ""
   },
-  "16613": {
+  "94801": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Train starts at 17:30"
   },
-  "19107": {
+  "22959": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
-  },
-  "22960": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+   "note": "Train starts at 15:50"
   }
  }
 }
