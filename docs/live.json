@@ -1,70 +1,62 @@
 {
- "fetched_at": "2026-11-23T03:48:06+05:30",
+ "fetched_at": "2026-11-23T08:27:31+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "20908": {
+  "69186": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 22:40"
+   "note": "Awaiting Update"
   },
-  "22958": {
+  "11464": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 21:50"
+   "note": "Incorrect Start Day"
   },
-  "22945": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:05"
+  "22717": {
+   "delay": 0.0,
+   "at": "XSK",
+   "age": 0,
+   "run_date": "2026-11-23",
+   "source": "railyatri",
+   "note": ""
   },
-  "20686": {
+  "20936": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
   },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "22960": {
+   "delay": 5.0,
+   "at": "BRGP",
+   "age": 0,
+   "run_date": "2026-11-23",
+   "source": "railyatri",
+   "note": ""
   },
-  "12906": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "94802": {
+   "delay": 19.0,
+   "at": "DHNL",
+   "age": 11,
+   "run_date": "2026-11-23",
+   "source": "railyatri",
+   "note": ""
   },
-  "19016": {
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
-  },
-  "15046": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+   "note": "Train starts at 10:20"
   }
  }
 }
