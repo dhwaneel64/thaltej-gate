@@ -1,102 +1,54 @@
 {
- "fetched_at": "2026-11-25T01:08:53+05:30",
+ "fetched_at": "2026-11-25T08:40:27+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22924": {
+  "69186": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Awaiting Update"
   },
-  "19256": {
+  "11464": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 17:30"
+   "note": "Train starts at 14:00"
   },
-  "19255": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "22717": {
+   "delay": 5.0,
+   "at": "JKA",
+   "age": 8,
+   "run_date": "2026-11-25",
+   "source": "railyatri",
+   "note": ""
   },
-  "22955": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "22960": {
+   "delay": 2.0,
+   "at": "BMM",
+   "age": 0,
+   "run_date": "2026-11-25",
+   "source": "railyatri",
+   "note": ""
   },
-  "22956": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+  "94802": {
+   "delay": 22.0,
+   "at": "CUL",
+   "age": -1,
+   "run_date": "2026-11-25",
+   "source": "railyatri",
+   "note": ""
   },
-  "12971": {
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
-  },
-  "14311": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19108": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "20937": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "20908": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "19270": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
-  },
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "no live data"
+   "note": "Train starts at 10:20"
   }
  }
 }
