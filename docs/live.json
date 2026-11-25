@@ -1,54 +1,62 @@
 {
- "fetched_at": "2026-11-25T08:40:27+05:30",
+ "fetched_at": "2026-11-25T18:24:01+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "69186": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Awaiting Update"
-  },
-  "11464": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 14:00"
-  },
-  "22717": {
-   "delay": 5.0,
-   "at": "JKA",
-   "age": 8,
+  "11091": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 16,
    "run_date": "2026-11-25",
    "source": "railyatri",
    "note": ""
   },
-  "22960": {
-   "delay": 2.0,
-   "at": "BMM",
+  "69185": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 20:05"
+  },
+  "19218": {
+   "delay": 0.0,
+   "at": "VGDC",
    "age": 0,
    "run_date": "2026-11-25",
    "source": "railyatri",
    "note": ""
   },
-  "94802": {
-   "delay": 22.0,
-   "at": "CUL",
-   "age": -1,
+  "22946": {
+   "delay": 0.0,
+   "at": "LPR",
+   "age": 0,
    "run_date": "2026-11-25",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
+  "19015": {
+   "delay": 16.0,
+   "at": "BRC",
+   "age": 10,
+   "run_date": "2026-11-25",
+   "source": "railyatri",
+   "note": ""
+  },
+  "14312": {
+   "delay": 19.0,
+   "at": "CHIB",
+   "age": 0,
+   "run_date": "2026-11-25",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 10:20"
+   "note": "Train starts at 21:45"
   }
  }
 }
