@@ -1,30 +1,78 @@
 {
- "fetched_at": "2026-11-26T09:39:13+05:30",
+ "fetched_at": "2026-11-26T19:23:45+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22960": {
-   "delay": 0.0,
-   "at": "VCN",
-   "age": 0,
+  "19218": {
+   "delay": 20.0,
+   "at": "WSE",
+   "age": 3,
    "run_date": "2026-11-26",
    "source": "railyatri",
    "note": ""
   },
-  "94802": {
-   "delay": 24.0,
-   "at": "SADL",
-   "age": 0,
+  "22946": {
+   "delay": 8.0,
+   "at": "JKA",
+   "age": 5,
    "run_date": "2026-11-26",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
+  "19015": {
+   "delay": 9.0,
+   "at": "ND",
+   "age": 14,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 10:20"
+   "note": "Train starts at 21:45"
+  },
+  "22969": {
+   "delay": 0.0,
+   "at": "RJT",
+   "age": 24,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22926": {
+   "delay": 12.0,
+   "at": "WTJ",
+   "age": 9,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 4.0,
+   "at": "NIU",
+   "age": 4,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 11.0,
+   "at": "SGD",
+   "age": 7,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
+  },
+  "20938": {
+   "delay": 20.0,
+   "at": "BNS",
+   "age": 3,
+   "run_date": "2026-11-26",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
