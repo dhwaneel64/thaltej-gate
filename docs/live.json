@@ -1,78 +1,38 @@
 {
- "fetched_at": "2026-11-27T20:11:57+05:30",
+ "fetched_at": "2026-11-28T04:28:27+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "15635": {
-   "delay": 0.0,
-   "at": "VGDC",
-   "age": 8,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
-  },
-  "19015": {
-   "delay": 15.0,
-   "at": "VTA",
-   "age": 4,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
-  },
-  "14312": {
-   "delay": 24.0,
-   "at": "DVY",
-   "age": 8,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22957": {
+  "22958": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 21:45"
+   "note": "Train starts at 21:50"
   },
-  "22926": {
-   "delay": 11.0,
-   "at": "RJT",
-   "age": 10,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
+  "22945": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:05"
   },
-  "19217": {
-   "delay": 3.0,
-   "at": "VS",
-   "age": 0,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
+  "22925": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 06:15"
   },
-  "12972": {
-   "delay": 16.0,
-   "at": "BTD",
-   "age": 3,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
-  },
-  "22951": {
-   "delay": 5.0,
-   "at": "LKD",
-   "age": 0,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
-  },
-  "20907": {
-   "delay": 16.0,
-   "at": "KSB",
-   "age": 8,
-   "run_date": "2026-11-27",
-   "source": "railyatri",
-   "note": ""
+  "19016": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "no live data"
   }
  }
 }
