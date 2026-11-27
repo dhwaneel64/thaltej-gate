@@ -1,46 +1,78 @@
 {
- "fetched_at": "2026-11-27T10:17:21+05:30",
+ "fetched_at": "2026-11-27T20:11:57+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "94802": {
-   "delay": 13.0,
-   "at": "GGM",
+  "15635": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 8,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19015": {
+   "delay": 15.0,
+   "at": "VTA",
+   "age": 4,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
+  },
+  "14312": {
+   "delay": 24.0,
+   "at": "DVY",
+   "age": 8,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
+   "delay": null,
+   "at": null,
+   "age": null,
+   "run_date": null,
+   "source": null,
+   "note": "Train starts at 21:45"
+  },
+  "22926": {
+   "delay": 11.0,
+   "at": "RJT",
+   "age": 10,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 3.0,
+   "at": "VS",
    "age": 0,
    "run_date": "2026-11-27",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 10:20"
+  "12972": {
+   "delay": 16.0,
+   "at": "BTD",
+   "age": 3,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
   },
-  "12474": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "22951": {
+   "delay": 5.0,
+   "at": "LKD",
+   "age": 0,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
   },
-  "12755": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
-  },
-  "15668": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Incorrect Start Day"
+  "20907": {
+   "delay": 16.0,
+   "at": "KSB",
+   "age": 8,
+   "run_date": "2026-11-27",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
