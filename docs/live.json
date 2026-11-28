@@ -1,38 +1,78 @@
 {
- "fetched_at": "2026-11-28T10:09:06+05:30",
+ "fetched_at": "2026-11-28T19:07:52+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "94802": {
-   "delay": 25.0,
+  "11087": {
+   "delay": 5.0,
+   "at": "VCN",
+   "age": 16,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19218": {
+   "delay": 10.0,
    "at": "CE",
    "age": 0,
    "run_date": "2026-11-28",
    "source": "railyatri",
    "note": ""
   },
-  "19119": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 10:20"
-  },
-  "12473": {
-   "delay": 5.0,
-   "at": "GIMC",
-   "age": 27,
+  "22946": {
+   "delay": 0.0,
+   "at": "VGDC",
+   "age": 9,
    "run_date": "2026-11-28",
    "source": "railyatri",
    "note": ""
   },
-  "16614": {
+  "15667": {
+   "delay": 19.0,
+   "at": "SUNR",
+   "age": 10,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19015": {
+   "delay": 31.0,
+   "at": "VXD",
+   "age": 2,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "22957": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Incorrect Start Day"
+   "note": "Train starts at 21:45"
+  },
+  "22926": {
+   "delay": 6.0,
+   "at": "ALB",
+   "age": 1,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "19217": {
+   "delay": 26.0,
+   "at": "SNJL",
+   "age": 1,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
+  },
+  "12972": {
+   "delay": 8.0,
+   "at": "SOJN",
+   "age": 3,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
   }
  }
 }
