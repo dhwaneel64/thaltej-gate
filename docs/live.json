@@ -1,38 +1,38 @@
 {
- "fetched_at": "2026-11-28T04:28:27+05:30",
+ "fetched_at": "2026-11-28T10:09:06+05:30",
  "horizon_hours": 4.0,
  "delays": {
-  "22958": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 21:50"
+  "94802": {
+   "delay": 25.0,
+   "at": "CE",
+   "age": 0,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
   },
-  "22945": {
+  "19119": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "Train starts at 21:05"
+   "note": "Train starts at 10:20"
   },
-  "22925": {
-   "delay": null,
-   "at": null,
-   "age": null,
-   "run_date": null,
-   "source": null,
-   "note": "Train starts at 06:15"
+  "12473": {
+   "delay": 5.0,
+   "at": "GIMC",
+   "age": 27,
+   "run_date": "2026-11-28",
+   "source": "railyatri",
+   "note": ""
   },
-  "19016": {
+  "16614": {
    "delay": null,
    "at": null,
    "age": null,
    "run_date": null,
    "source": null,
-   "note": "no live data"
+   "note": "Incorrect Start Day"
   }
  }
 }
